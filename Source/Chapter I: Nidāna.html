@@ -1,0 +1,543 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1156' accesskey='1'>BA: Proto-BA (Buddhanāmanirdeśa)</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>BA: Proto-BA (Buddhanāmanirdeśa)<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1156[6124]" value="6124" id="lancheckbox" checked >Chinese: Zhi Qian, 支謙, fl. 222-252 CE. T. 281</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1156[6125]" value="6125" id="lancheckbox" checked >Chinese: Lokakṣema, 支婁迦讖, fl. 168-189 CE (Dōushā jīng 兜沙經 group T.280, T.282, T.283)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1156[6127]" value="6127" id="lancheckbox" checked >Tibetan: BA12-Bnn, Kg Phal chen ka p.</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1156[6126]" value="6126" id="lancheckbox" checked >Sanskrit: BA11-Bnn, san rec.:</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1156">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1156">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1156'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1156">Search in BA: Proto-BA (Buddhanāmanirdeśa)</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1156'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1156'>BA: Proto-BA (Buddhanāmanirdeśa)</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1156" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="148516.Title|148517.ChapterI:Nidāna|148518.ChapterII:Praṇidhānacaryā|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_148516.Title" border=0 hspace=2><a id="href_148516.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1156&mid=1980647&level=1&cid=870550" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_148517.ChapterI:Nidāna" border=0 hspace=2><a id="href_148517.ChapterI:Nidāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1156&mid=1980648&level=1&cid=870551" class="ajax_tree0">Chapter I: Nidāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_148518.ChapterII:Praṇidhānacaryā" border=0 hspace=2><a id="href_148518.ChapterII:Praṇidhānacaryā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1156&mid=1980703&level=1&cid=870599" class="ajax_tree0">Chapter II: Praṇidhānacaryā
+</td></tr></table>
+<script language=javascript>test('148517.ChapterI:Nidāna|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1156&amp;mid=1980648&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1156&amp;cid=870551&amp;mid=1980648&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1156&amp;cid=870551&amp;mid=1980648&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='8842177'></div><div class='clear'></div><span id='8842177bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='8842451'></div><div class='clear'></div><span id='8842451bi' class='paragraph'>
+							一切諸佛威神恩。諸過去當來今現在亦爾。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='8842999'></div><div class='clear'></div><span id='8842999bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='8842725'></div><div class='clear'></div><span id='8842725bi' class='paragraph'>
+							Nidāna&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842178bi' class='paragraph'>
+							聞如是。一時佛。遊於摩竭道場。初始得佛。光景甚明。自然蓮華寶師子座。古昔諸佛所坐皆爾。道徳威儀相好如一。身意清淨。福行普具。明所徹照人刹法處。去來現在無復罣礙。成興於世。一切悉等。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842452bi' class='paragraph'>
+							佛在摩竭提國時。法清淨處。其處號曰在所問清淨。始作佛時。光景甚明。自然金剛蓮華。周匝甚大。自然師子座。諸佛過去時。亦悉於上坐。儀法等無有異。極相法中。出生極過度已。諸佛身體行。悉等具足。明無所復罣礙。 不可計佛處。不可計法處。不可計諸大十方人民處。不可計佛刹處。過去當來今現在佛等所出生也。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843000bi' class='paragraph'>
+							bcom ldan 'das thog ma mṅon par saṅs rgyas pa ma ga d+ha'i chos kyi dgon pa'i sñiṅ po byaṅ chub na bźugs te | blo śin tu rnam par dag pa || myi gñis pas yaṅ dag par spyod pa | chos mtshan ñid myed pa la śin tu gźol ba | saṅs rgyas kyi rnam par spyod pas saṅs rgyas thams cad daṅ  | mñam pa ñid brñes pa | sgrib pa myed pas rtogs par thugs su chud pa | phyir myi ldog pa'i chos can spyod yul 'phrogs pa myed pa | rnam par dgod pa bsam gyis myi khyab pa | dus gsum mñam pa ñid la śin tu byuṅ ba | pho braṅ kun tu 'od na seṅ ge'i khri padmo'i sñiṅ po can la bźugs te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842726bi' class='paragraph'>
+							聞如是: evaṃ mayā śrutam; 一時: ekasmin samaye; 摩竭: Magadha; 道場: deśe; 相好: lakṣaṇa_anuvyañjana;&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842179bi' class='paragraph'>
+							時會菩薩。盡一生補(5)處。神通妙達。周遍十方。&nbsp;</span><span id='8842180bi' class='paragraph'>
+						 導利衆生。&nbsp;</span><span id='8842181bi' class='paragraph'>
+						 開佛法(6)藏。&nbsp;</span><span id='8842182bi' class='paragraph'>
+						 示泥洹要。&nbsp;</span><span id='8842183bi' class='paragraph'>
+						 都入人根。宿命智徳。善權方(7)便。訓化以漸。解内外法。終始不搖。等諸佛(8)土。無所分別。讃揚佛名。不可稱極。&nbsp;</span><span id='8842184bi' class='paragraph'>
+						 三塗之(9)事。靡不貫達。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842453bi' class='paragraph'>
+							諸菩薩等。各各從異國土來都大會。其數如十佛刹塵。一塵爲一菩薩。如是爲限。諸菩薩賜一生補處。&nbsp;</span><span id='8842454bi' class='paragraph'>
+						 皆入十方人民典安隱。&nbsp;</span><span id='8842455bi' class='paragraph'>
+						 皆入法處。皆入十方諸刹土。&nbsp;</span><span id='8842456bi' class='paragraph'>
+						 皆入十方泥洹慧&nbsp;</span><span id='8842457bi' class='paragraph'>
+						 皆入十方所作世間人宿命。皆入稍稍増深菩薩。皆入諸慧法中。皆入内外法中。皆入不動不搖法中。&nbsp;</span><span id='8842458bi' class='paragraph'>
+						 皆入過去當來今現在法中。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843001bi' class='paragraph'>
+							byaṅ chub sems dpa' saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed kun kyaṅ skye ba gcig gis thogs pa 'jig rten gyi khams gźan daṅ gźan nas 'dus pa |&nbsp;</span><span id='8843002bi' class='paragraph'>
+						 sems can gyi khams la dpyod pa&nbsp;</span><span id='8843003bi' class='paragraph'>
+						 chos kyi dbyiṅs la dpyod pa | 'jig rten gyi khams la dpyod pa |&nbsp;</span><span id='8843004bi' class='paragraph'>
+						 mya ṅan las 'das pa'i dbyiṅs la dpyod pa |&nbsp;</span><span id='8843005bi' class='paragraph'>
+						 las kyi rnam par smin pa la dpyod pa | bsam pa'i rgyud la dpyod pa | don daṅ yi ge la dpyod pa | 'jig rten pa daṅ 'jig rten las 'das pa la dpyod pa | 'dus byas daṅ | 'dus ma byas pa la dpyod pa |&nbsp;</span><span id='8843006bi' class='paragraph'>
+						 'das pa daṅ ma 'oṅs pa daṅ da ltar byuṅ ba la dpyod pa śa stag daṅ thabs gcig go |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842727bi' class='paragraph'>
+							..&nbsp;</span><span id='8842728bi' class='paragraph'>
+						 ..&nbsp;</span><span id='8842729bi' class='paragraph'>
+						 法藏: dharmagañja(Vkn);&nbsp;</span><span id='8842730bi' class='paragraph'>
+						 ..&nbsp;</span><span id='8842731bi' class='paragraph'>
+						 人根: satva_āśaya(Vkn); 善權方便: upāya-kauśalya;&nbsp;</span><span id='8842732bi' class='paragraph'>
+						 三塗: tryadhva(Vkn)&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842185bi' class='paragraph'>
+							至皆歎曰。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842459bi' class='paragraph'>
+							諸菩薩輩。議如是。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843007bi' class='paragraph'>
+							de nas byaṅ chub sems dpa' de dag 'di sñam du sems te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842733bi' class='paragraph'>
+							..&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842186bi' class='paragraph'>
+							佛念吾等。建立大志。能悉現我諸佛世界所有好惡。殊勝之國。&nbsp;</span><span id='8842187bi' class='paragraph'>
+						 佛所遊居。興隆道化。光明神足。教訓天人。啓示法意。佛之本業。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842460bi' class='paragraph'>
+							佛愛我曹等輩。 諸菩薩等所念。示現我等。諸佛刹。&nbsp;</span><span id='8842461bi' class='paragraph'>
+						 如佛所行居處阿。彼聞所有。現我等諸佛刹清淨。現我等如佛法清淨。佛所説法。悉皆使我曹見矣。現我等佛刹成敗時。使我曹悉見矣。現我曹等諸佛起出時。現我等佛刹所有善惡。佛所有悉示我。[See the previous record as well]&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843008bi' class='paragraph'>
+							bcom ldan 'das kyis bdag cag la thugs brtse bar dgoṅs te | byaṅ chub sems dpa' rnams kyi bsam pa ji lta ba bźin du saṅs rgyas kyi źiṅ yoṅs su bstan kyaṅ ruṅ |&nbsp;</span><span id='8843009bi' class='paragraph'>
+						 saṅs rgyas kyi spyod pa yoṅs su bstan kyaṅ ruṅ | saṅs rgyas kyi źiṅ gi rgyan yoṅs su bstan kyaṅ ruṅ | saṅs rgyas kyi chos ñid yoṅs su bstan kyaṅ ruṅ | saṅs rgyas kyi źiṅ yoṅs su dag pa bstan kyaṅ ruṅ |saṅs rgyas kyi chos bśad pa yoṅs su bstan kyaṅ ruṅ | saṅs rgyas kyi źiṅ gi raṅ bźin yoṅs su bstan kyaṅ ruṅ  | saṅs rgyas kyi mthu yoṅs su bstan kyaṅ ruṅ | saṅs rgyas kyi źiṅ gi rgyan yoṅs su bstan kyaṅ ruṅ | saṅs rgyas kyi byaṅ chub yoṅs su bstan kyaṅ ruṅ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842734bi' class='paragraph'>
+							殊勝: viśeṣa(Vkn);&nbsp;</span><span id='8842735bi' class='paragraph'>
+						 &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842188bi' class='paragraph'>
+							十地十智。十行十投。十藏十願。十明十定。十現十印。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842462bi' class='paragraph'>
+							示現我曹十方諸有刹土。現我等諸不可計佛所説。現我等菩薩十法住。現我等菩薩十法所行。現我等菩薩十法悔過經。現我等菩薩十道地。現我菩薩十鎭。現我等菩薩十居處所願。現我菩薩十黠。現我菩薩十三昧。現我菩薩十飛法。現我菩薩十印。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843010bi' class='paragraph'>
+							phyogs bcu'i 'jig rten gyi khams su saṅs rgyas bcom ldan 'das rnams kyis byaṅ chub sems dpa'i rnam par dgod pa bcu ji ltar rnam par dgod pa de dag yoṅs su bstan kyaṅ ruṅ | byaṅ chub sems dpa'i spyod pa bcu yoṅs su bstan kyaṅ ruṅ | byaṅ chub sems dpa'i tshad myed pa bcu yoṅs su bstan kyaṅ ruṅ | byaṅ chub sems dpa'i gter rnams yoṅs su bstan kyaṅ ruṅ | byaṅ chub sems dpa'i sa rnams yoṅs su bstan kyaṅ ruṅ | byaṅ chub sems dpa'i smon lam rnams yoṅs su bstan kyaṅ ruṅ | byaṅ chub sems dpa'i tiṅ ṅe 'dzin bcu rnams yoṅs su bstan kyaṅ ruṅ | byaṅ chub sems dpa'i rnam par 'phrul pa bcu yoṅs su bstan kyaṅ ruṅ | byaṅ chub sems dpa'i mgo bcu yoṅs su bstan kyaṅ ruṅ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842736bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842189bi' class='paragraph'>
+							斷我瑕疵及諸疑妄。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842463bi' class='paragraph'>
+							現我菩薩悉飛來時。現我佛名無有盡。時佛使我皆護世間人民。十方佛諸有刹土。悉清淨無瑕穢。現我佛諸所知有無有也。現我諸惡根本。悉使清淨。諸法悉爲我説。諸所疑難。皆爲解之。悉爲解狐疑。皆過度矣。諸所有欲斷之。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843011bi' class='paragraph'>
+							byaṅ chub sems dpa' thams cad yaṅ dag par 'byuṅ ba'i phyir | de bźin gśegs pa'i gduṅ myi gcad pa daṅ | sems can thams cad yoṅs su bskyab pa daṅ | 'jig rten gyi khams thams cad ñe bar ñon moṅs pa med par bya ba daṅ | 'du byed thams cad yoṅs su śes par bya ba daṅ | chos thams cad yaṅ dag par bstan par bya ba daṅ | kun nas ñon moṅs pa thams cad rnam par dag par bya ba daṅ | the tsom thams cad yoṅs su gcad pa daṅ | nem nur thams cad śin tu bstsal ba daṅ | gnas thams cad rab tu gźom par bya ba'i phyir | goṅ du de bźin gśegs pa'i sa bstan kyaṅ ruṅ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842737bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842190bi' class='paragraph'>
+							悉爲我現佛行佛智。佛神佛力佛定。無量變化隨時。四時不護。四無所畏。十八不絶。一切敏慧。無上道徳。衆事敷露&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842464bi' class='paragraph'>
+							現我佛所止處。現我佛諸法所部界。現我佛威神。現我佛所行。現我佛筋力。現我佛四事不護。現我佛三昧所入處。現我佛所變化在所爲。現我佛無有過勝者。現我佛所有尊號。無有能及逮者。現我佛所根。現我佛飛。現我佛光明。現我佛智慧。現我佛四事無所畏。佛悉知諸菩薩心所念。佛悉現光明威神&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843012bi' class='paragraph'>
+							goṅ du de bźin gśegs pa'i yul bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i byin gyi rlabs bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i spyod yul bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i stobs bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i myi bsñeṅs pa bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i tiṅ ṅe 'dzin bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i rdzu 'phrul bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i mṅa' chen po bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i myi 'phrogs pa bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i spyan bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i sñan bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i śaṅs bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i ljags bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i sku bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i thugs bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i spobs pa bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i ye śes bstan kyaṅ ruṅ | goṅ du de bźin gśegs pa'i khyu mchog gi mthu bstan kyaṅ ruṅ sñam pa daṅ | de nas bcom ldan 'das kyis byaṅ chub sems dpa' de dag gi sems kyi yoṅs su rnam par rtog par thugs kyis thugs su chud nas de bźin gśegs pa'i rdzu 'phrul mṅon par 'du bya ba mṅon par 'du mdzad do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842738bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842191bi' class='paragraph'>
+							東去無極　有香林刹 佛名入精進　菩薩字敬首&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842465bi' class='paragraph'>
+							東方極遠不可計佛刹有佛。佛名阿逝墮。其刹名訖連桓。文殊師利菩薩。從是刹來。與諸菩薩倶。數如十方刹塵。皆前爲佛作禮。各各於自然師子座交路帳中坐&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843013bi' class='paragraph'>
+							rdzu 'phrul gyi rnam pa de dag mṅon par 'du mdzad pas | śar phyogs logs su 'jig rten gyi khams saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed 'das pa'i pha rol gyi | 'jig rten gyi khams gser gyi mdog ces bya ba de bźin gśegs pa rig byed mi g.yo ba'i saṅs rgyas kyi źiṅ nas byaṅ chub sems dpa' 'jam dpal byaṅ chub sems dpa' saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed daṅ lhan cig tu | bcom ldan 'das gaṅ na ba der doṅ ste phyin nas || bcom ldan 'das la phyag 'tshal te | śar phyogs su brten nas seṅ ge'i khri pad mo'i sñiṅ po can dag mṅon par sprul te | skyil mo kruṅ bcas nas 'khod do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842739bi' class='paragraph'>
+							香林刹: gandha-vana-kṣetra; 敬首: Mañjuśrī(Aṣṭ);&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842192bi' class='paragraph'>
+							南去無極　有樂林刹 佛名不捨樂　菩薩字覺首&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842466bi' class='paragraph'>
+							南方極遠不可計佛刹有佛。佛名阿泥羅墮羅。其刹名樓耆洹。佛陀師利菩薩。從是刹來。與諸菩薩倶。其數如十佛刹塵。皆前爲佛作禮。各各於自然師子座交路帳中坐&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843014bi' class='paragraph'>
+							lho phyogs logs su 'jig rten gyi khams saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed 'das pa'i 'jig rten gyi khams kha dog yid du 'oṅ ba źes bya ba de bźin gśegs pa rig byed mi bskyod pa'i saṅs rgyas kyi źiṅ nas | byaṅ chub sems dpa' saṅs rgyas dpal byaṅ chub sems dpa' saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed daṅ lhan cig tu | bcom ldan 'das gaṅ na ba der doṅ ste phyin nas | bcom ldan 'das la phyag 'tshal te | lho phyogs su brten nas seṅ ge'i khri pad mo'i sñiṅ po can dag mṅon par sprul te skyil mo kruṅ bcas nas 'khod do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842740bi' class='paragraph'>
+							覺首: bodhi-śrī&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842193bi' class='paragraph'>
+							西去無極　有華林刹 佛名習精進　菩薩字寶首&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842467bi' class='paragraph'>
+							西方極遠不可計佛刹有佛。佛名阿斯墮陀。其刹名波頭洹。羅隣師利菩薩。從是刹來。與諸菩薩倶。其數如十佛刹塵。皆前爲佛作禮。各各於自然師子座交路帳中坐&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843015bi' class='paragraph'>
+							nub phyogs logs su 'jig rten gyi khams saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed 'das pa'i pha rol gyi 'jig rten gyi khams pad mo'i mdog ces bya ba de bźin gśegs pa rig byed bciṅs myed kyi saṅs rgyas kyi źiṅ nas byaṅ chub sems dpa' nor dpal byaṅ chub sems dpa' saṅs rgyas kyi źiṅ gi rdul śin tu phra ba sñed daṅ lhan cig tu bcom ldan 'das gaṅ na ba der doṅ ste phyin nas | bcom ldan 'das la phyag 'tshal te | nub phyogs su brten nas seṅ ge'i khri pad mo'i sñiṅ po can dag mṅon par sprul te | skyil mo kruṅ bcas nas 'khod do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842741bi' class='paragraph'>
+							寶首: ratna-śrī&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842194bi' class='paragraph'>
+							北去無極　有道林刹 佛名行精進　菩薩字慧首&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842468bi' class='paragraph'>
+							北方極遠。不可計佛刹有佛。佛名阿闍墮。其刹名占倍洹。檀那師利菩薩。從是刹來。與諸菩薩倶。其數如十佛刹塵。皆前爲佛作禮。各各於自然師子座交路帳中坐&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843016bi' class='paragraph'>
+							byaṅ phyogs logs su 'jig rten gyi khams saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed 'das pa'i | 'jig rten gyi khams tsam pa ka'i mdog ces bya ba | de bźin gśegs pa rig byed kun spyod kyi saṅs rgyas kyi źiṅ nas | byaṅ chub sems dpa' rin chen dpal byaṅ chub sems dpa' saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed daṅ lhan cig tu bcom ldan 'das gaṅ na ba der doṅ ste phyin nas | bcom ldan 'das la phyag 'tshal te | byaṅ phyogs su brten nas seṅ ge'i khri pad mo'i sñiṅ po can dag mṅon par sprul te skyil mo kruṅ bcas nas 'khod do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842742bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842195bi' class='paragraph'>
+							東北無極　有青蓮刹 佛名悲精進　菩薩字徳首&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842469bi' class='paragraph'>
+							東北方極遠。不可計佛刹有佛。佛名阿輸那墮國陀。其刹名優彼洹。群那師利菩薩。從是刹來。與諸菩薩倶。其數如十佛刹塵。皆前爲佛作禮。各各於自然師子座交路帳中坐&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843017bi' class='paragraph'>
+							byaṅ śar gyi phyogs mtshams su 'jig rten gyi khams saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed 'das pa'i pha rol gyi 'jig rten gyi khams uta pa la'i mdog ces bya ba de bźin gśegs pa rig byed ñi ma'i saṅs rgyas kyi źiṅ nas byaṅ chub sems dpa' yon tan dpal byaṅ chub sems dpa' saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed daṅ lhan cig tu bcom ldan 'das gaṅ na ba der doṅ ste phyin nas | bcom ldan 'das la phyag 'tshal te | byaṅ śar gyi phyogs mtshams su brten nas seṅ ge'i khri pad mo'i sñiṅ po can dag mṅon par sprul te skyil mo kruṅ bcas nas 'khod do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842743bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842196bi' class='paragraph'>
+							東南無極　有金林刹 佛名盡精進　菩薩字目首&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842470bi' class='paragraph'>
+							東南方極遠。不可計佛刹有佛。佛名阿旃陀墮陀。其刹名犍闍洹。那涅羅師利菩薩。從是刹來。與諸菩薩倶。其數如十佛刹塵。皆前爲佛作禮。各各於自然師子座交路帳中坐&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843018bi' class='paragraph'>
+							śar lho'i phyogs mtshams su 'jig rten gyi khams saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed 'das pa'i pha rol gyi 'jig rten gyi khams gser gyi mdog ces bya ba de bźin gśegs pa rig byed mtha' rgal gyi saṅs rgyas kyi źiṅ nas byaṅ chub sems dpa' mig gi dpal byaṅ chub sems dpa' saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed daṅ lhan cig tu | bcom ldan 'das gaṅ na ba der doṅ ste phyin nas bcom ldan 'das la phyag 'tshal te | śar lho'i phyogs mtshams su brten nas seṅ ge'i khri pad mo'i sñiṅ po can dag mṅon par sprul te | skyil mo kruṅ bcas nas 'khod do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842744bi' class='paragraph'>
+							金林刹: suvarṇa-vana-kṣetra;&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842197bi' class='paragraph'>
+							西南無極　有寶林刹 佛名上精進　菩薩字明首&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842471bi' class='paragraph'>
+							西南方極遠。不可計佛刹有佛。佛名欝沈墮大。其刹名羅憐洹。惟闇師利菩薩。從是刹來。與諸菩薩倶。其數如十佛刹塵。皆前爲佛作禮。各各於自然師子座交路帳中坐&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843019bi' class='paragraph'>
+							lho nub kyi phyogs mtshams su 'jig rten gyi khams saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed 'das pa'i 'jig rten gyi khams rin po che'i mdog ces bya ba de bźin gśegs pa rig byed dam pa'i saṅs rgyas kyi źiṅ nas byaṅ chub sems dpa' brtson 'grus dpal byaṅ chub sems dpa' saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed daṅ lhan cig tu | bcom ldan 'das gaṅ na ba der doṅ ste phyin nas | bcom ldan 'das la phyag 'tshal te | lho nub kyi phyogs mtshams su brten nas seṅ ge'i khri pad mo'i sñiṅ po can dag mṅon par sprul te | skyil mo kruṅ bcas nas 'khod do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842745bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842198bi' class='paragraph'>
+							西北無極　有金剛刹 佛名一乘度　菩薩字法首&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842472bi' class='paragraph'>
+							西北方極遠。不可計佛刹有佛。佛名阿波羅墮。其刹名活逸洹。曇摩師利菩薩。從是刹來。與諸菩薩倶。其數如十佛刹塵。皆前爲佛作禮。各各於自然師子座交路帳中坐&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843020bi' class='paragraph'>
+							nub byaṅ gi phyogs mtshams su 'jig rten gyi khams saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed 'das pa'i pha rol gyi 'jig rten gyi khams rdo rje'i mdog ces bya ba | de bźin gśegs pa | rig byed dbaṅ phyug gi saṅs rgyas kyi źiṅ nas | byaṅ chub sems dpa' chos kyi dpal źes bya ba byaṅ chub sems dpa' saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed daṅ lhan cig tu | bcom ldan 'das gaṅ na ba der doṅ ste phyin nas | bcom ldan 'das la phyag 'tshal te | nub byaṅ gi phyogs mtshams su brten nas | seṅ ge'i khri pad mo'i sñiṅ po can dag mṅon par sprul te skyil mo kruṅ bcas nas 'khod do |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842746bi' class='paragraph'>
+							金剛刹: vajra-kṣetra; 法首: dharma-śrī;&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842199bi' class='paragraph'>
+							下方無極　有水精刹 佛名梵精進　菩薩字智首&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842473bi' class='paragraph'>
+							下方極遠。不可計佛刹有佛。佛名楓摩墮羅。其刹名潘利洹。那師利菩薩。從是刹來。與 諸菩薩倶。其數如十佛刹塵。皆前爲佛作禮。各各於自然師子座交路帳中坐&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843021bi' class='paragraph'>
+							'og gi phyogs logs su 'jig rten gyi khams saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed 'das pa'i pha rol 'jig rten gyi khams śel gyi mdog ces bya ba de bźin gśegs pa rig byed tshaṅs pa'i dbaṅ po'i saṅs rgyas kyi źiṅ nas byaṅ chub sems dpa' ye śes dpal byaṅ chub sems dpa' saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed daṅ lhan cig tu | bcom ldan 'das gaṅ na ba der doṅ ste phyin nas | bcom ldan 'das la phyag 'tshal te | 'og gi phyogs su brten nas seṅ ge'i khri pad mo'i sñiṅ po can dag mṅon par sprul te | skyil mo kruṅ bcas nas 'khod do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842747bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842200bi' class='paragraph'>
+							上方無極　有欲林刹 佛名至精進　菩薩字賢首是賢首等。皆彼第一。各與無數上人倶來。稽首佛足。坐一面蓮華上。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842474bi' class='paragraph'>
+							上方極遠。不可計佛刹有佛。佛名墮色。其刹名儨提拾洹。那軷陀師利菩薩。從是刹來。與諸菩薩倶。其數如十佛刹塵。皆前爲佛作禮。各各於自然師子座交路帳中坐&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843022bi' class='paragraph'>
+							steṅ gi phyogs logs su 'jig rten gyi khams saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed 'das pa'i 'jig rten gyi khams 'dra ba'i mdog ces bya ba de bźin gśegs pa rig byed sna tshogs kyi saṅs rgyas kyi źiṅ nas byaṅ chub sems dpa' bzaṅ po'i dpal byaṅ chub sems dpa' saṅs rgyas kyi źiṅ bcu'i rdul śin tu phra ba sñed daṅ lhan cig tu bcom ldan 'das gaṅ na ba der doṅ ste phyin nas | bcom ldan 'das la phyag 'tshal te | steṅ gi phyogs su brten nas seṅ ge'i khri pad mo'i sñiṅ po can dag mṅon par sprul te | skyil mo kruṅ bcas nas 'khod do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842748bi' class='paragraph'>
+							賢首: bhadra-śrī;&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842201bi' class='paragraph'>
+							彼時敬首菩薩。承佛聖旨。歎曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842475bi' class='paragraph'>
+							文殊師利菩薩。持佛威神。悉遍視諸菩薩。皆遍以便擧慧言。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843023bi' class='paragraph'>
+							de nas byaṅ chub sems dpa' 'jam dpal gyis saṅs rgyas kyi byin gyi rlabs kyis | byaṅ chub sems dpa'i dge 'dun thams cad la bltas te 'di skad ces smras so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842749bi' class='paragraph'>
+							敬首: Mañjuśrī(Aṣṭ);&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842202bi' class='paragraph'>
+							快哉。今上人會。爲未曾有。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842476bi' class='paragraph'>
+							諸菩薩大衆會。何甚快耶。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843024bi' class='paragraph'>
+							byaṅ chub sems dpa' 'dus pa 'di dag ni ṅo mtshar thob pa śa stag ste | saṅs rgyas bcom ldan 'das rnams kyi saṅs rgyas kyi źiṅ ni bsam gyis myi khyab po || saṅs rgyas bcom ldan 'das rnams kyi saṅs rgyas kyi rnam par spyod pa ni bsam gyis myi khyab po || saṅs rgyas bcom ldan 'das rnams kyi saṅs rgyas kyi źiṅ gi rgyan ni bsam gyis myi khyab po || saṅs rgyas bcom ldan 'das rnams kyi saṅs rgyas kyi chos ñid ni bsam gyis myi khyab po || saṅs rgyas bcom ldan 'das rnams kyi saṅs rgyas kyi źiṅ yoṅs su dag pa ni bsam gyis myi khyab po || saṅs rgyas bcom ldan 'das rnams kyi saṅs rgyas kyi chos bstan pa ni bsam gyis myi khyab bo || saṅs rgyas bcom ldan 'das rnams kyi saṅs rgyas 'byuṅ ba ni bsam gyis myi khyab po || saṅs rgyas bcom ldan 'das rnams kyi saṅs rgyas kyi źiṅ kun tu rgyu ba ni bsam gyis myi khyab po || saṅs rgyas bcom ldan 'das rnams kyi bla na myed pa yaṅ dag par rdzogs pa'i byaṅ chub ni bsam gyis myi khyab ste | <br/> [See also the next record]&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842750bi' class='paragraph'>
+							上人: bodhisatva(Vkn); 未曾有: āścaryaprāptā(Vkn);&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842203bi' class='paragraph'>
+							觀其所止。佛國清淨。至於被服如來徳戒。修行微妙成覺根力。演説經法。得佛威神。隨刹清濁。度人無極。分流道化。靡不周匝。於此佛土。國殊別者億百千姟。賢愚好醜。長短壽夭。種種言異。皆聞佛徳。各自名之。或有名佛爲大聖人。或有名佛爲大沙門。或號衆祐。或號神人。或稱勇智。或稱世尊。或謂能儒。或謂昇仙。或呼天師。或呼最勝。如是十方諸天人民。所稱名佛億萬無數。此皆佛本發意以來。班宣道化。所誨之徒也是時。佛放足下相輪光明。悉照佛界諸小國土。一小國土者。一須彌山日月運繞照四天下。東弗于逮。南閻浮提。西拘耶尼。北欝單越。四周大海。鐵垣圍表。上有二十八天。如此者爲一小國土。周匝十方合有百億。是時悉現百億須彌山百億日月。及四天王天。忉利天。炎天。兜術天。不憍樂天。化應聲天。梵天。梵衆天。梵輔天。大梵天。清明天。水行天。水微天。水無量天。水音天。約淨天。遍淨天。淨明天。守妙天。微妙天。廣妙天。極妙天。福愛天。愛勝天。近際天善觀天。快見天。無結愛天。識慧天。無所念慧天。至二十八無色天。各有百億。此爲一佛刹。號曰忍世界。釋迦文佛。分身百億。悉遍其中。於時天人。覩衆小國。諸佛菩薩。若近相見&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842477bi' class='paragraph'>
+							不可復計諸佛刹。佛所居處。諸所處。諸所被服佛法。佛説法。佛刹威神。佛所行。佛筋力。佛刹善惡。不可計佛法。何因耶。十方諸佛刹土。所説道。所度脱十方人諸法甚深無極。如虚空。了無所罣礙。何因耶。是1蔡呵祇刹土四面種種人。各各異身體。各各異名。各各異色。各各有長短。各各有壽命。各各有形類。各各有思想。各各有念。各各異有聲。各各有聞佛聲。何因是國土。名波迦私提。四面中有呼佛名曰勝達。中有呼世世慢陀。中有呼夷阿那坭提。中有呼釋迦文尼。中有呼鼓師薩沈。中有呼墮樓延。中有呼倶滑提。中有呼摩呵沙門。中有呼晨那愁樓提。中有呼質多愁樓提等。爲四面如是輩。各各呼釋迦文佛名。合爲萬字。如是十方極過去不可復計諸佛刹。都人民種種各異語。共呼釋迦文佛。名佛字。一一佛刹。凡各十億萬字。釋迦文佛。從本未造學道已來。諸所教授弟子等輩時人。如是。佛放光明。先從足下出。照 一佛界中。極明現十億閻浮利天南。十億大海。十億須彌山。十億遮加惒山。十億弗于逮天東。十億倶耶匿天西。十億欝單曰天北。十億照頭摩羅天。十億忉利天。十億鹽天。十億兜術天。十億泥摩羅提羅鄰優天。十億波羅蜜和耶拔致天。十億梵天。十億梵迦夷天。十億梵弗還天。十億梵迦産天。十億摩訶梵天。十億廅天。十億波梨陀天。十億廅波摩那天。十億阿會亘羞天。十億7波栗羞訶天。十億阿波摩羞天。十億羞訖天。十億權呵天。十億波栗推呵天。十億阿＊波墮訶天。十億惟于潘天。十億阿惟潘天。十億阿陀波天。十億須音武天。十億呵迦膩吒天。十億阿惟先惟先尼如是等。各各照見諸天上人所止處。敢是佛界中。悉皆照明。釋迦文佛。都所典主。十方國一一方。各有一億小國土。皆有一大海一須彌山。上至三十三天。一小國土。如是所部。凡有十億小國土。合爲一佛刹名爲蔡呵祇。佛分身。悉遍至十億小國土。一一小國土。皆 有一佛。凡有十億佛。皆與諸菩薩。共坐十億小國土。諸天人民。皆悉見佛。諸菩薩諸天人民。皆持佛威神。相視如迎。相見&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843025bi' class='paragraph'>
+							saṅs rgyas bcom ldan ’das rnams kyi saṅs rgyas (4) kyi źiṅ ni | bsam gyis mi khyab bo || saṅs rgyas bcom ldan ’das rnams kyi saṅs rgyas kyi rnam par spyod pa ni | bsam gyis mi khyab bo || saṅs rgyas bcom ldan ’das rnams (5) kyi saṅs rgyas kyi źiṅ gi rgyan ni | bsam gyis mi khyab bo || saṅs rgyas bcom ldan ’das rnams kyi saṅs rgyas kyi chos ñid ni | bsam gyis mi khyab bo || saṅs rgyas bcom (6) ldan ’das rnams kyi saṅs rgyas kyi źiṅ yoṅs su dag pa ni | bsam gyis mi khyab bo || saṅs rgyas bcom ldan ’das rnams kyi saṅs rgyas kyi chos bstan pa ni | bsam gyis (7) mi khyab bo || saṅs rgyas bcom ldan ’das rnams kyi saṅs rgyas kyi ’byuṅ ba ni | bsam gyis mi khyab bo || saṅs rgyas bcom ldan ’das rnams kyi saṅs rgyas kyi źiṅ kun (261a1) tu rgyu ba ni | bsam gyis mi khyab bo || saṅs rgyas bcom ldan ’das rnams kyi bla na med pa yaṅ dag par rdzogs pa’i byaṅ chub ni | bsam gyis mi khyab ste | (2) de ci’i phyir źe na | ’di ltar saṅs rgyas bcom ldan ’das rnams ni | phyogs bcu’i ’jig rten gyi khams dag tu sems can ’dul ba rnams kyi bsam pa thugs su chud ciṅ | (3) nam mkha’i dbyiṅs kyi mthas gtugs pa chos kyi dbyiṅs kyis klas pa dag tu chos ston te | de ci’i phyir źe na | kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di (4) ñid daṅ | de ma yin pa’i gliṅ bźi pa gźan dag na’aṅ sku gźan daṅ gźan | mtshan gźan daṅ gźan | kha dog daṅ dbyibs gźan daṅ gźan | chu źeṅ gźan daṅ (5) gźan | sku tshe’i tshad gźan daṅ gźan | skye mched brñes pa gźan daṅ gźan | dbaṅ po brñes pa gźan daṅ gźan | ’byuṅ ba’i skye mched gźan daṅ gźan | sku (6) gzugs gźan daṅ gźan du de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/>It seems impossible to compare this Chinese paragraph with the Tibetan version due to the fact that the Chinese paragraph is much shorter than that of the Tibetan. Nonetheless, the contents of this Chinese paragraph are similar to the following Tibetan sentences. For example, both of them describe the name of Tathāgata, Cakṣur-dvipa, the four directions, and the Saha-world. Furthermore, the beginning of the second chapter of both versions are same in that they start with the conversation between two bodhisatvas, namely the bodhisattva Mañjuśrī and the bodhisattva Bhadraśrī.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842751bi' class='paragraph'>
+							經法: dharmaparyāya(Vkn); 佛威神: buddhānubhāva(Vkn); 弗于逮: Pūrva-Videha; 閻浮提: Jambudvīpa; 拘耶尼: Aparagodānīya; 欝單越: Uttarakuru;&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842204bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842478bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843026bi' class='paragraph'>
+							kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su lho phyogs logs na gliṅ bźi pa bzod par dka’ ba źes bya ba yod de | de na de bźin gśegs pa la (3) dbaṅ po źes bya bar rab tu śes so || nor grags źes bya bar rab tu śes so || dri ma med pa źes bya bar rab tu śes so || yaṅ dag par gsuṅ ba źes bya bar rab tu śes so || (4) ’dul ba źes bya bar rab tu śes so || dgyes pa mṅa’ ba źes bya bar rab tu śes so || rnam par grags pa źes bya bar rab tu śes so || don mdzad pa źes bya bar rab tu śes (5) so || mtha’ yas pa źes bya bar rab tu śes so || dpal daṅ ldan pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa bzod par dka’ (6) ba na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su nub phyogs (7) logs na gliṅ bźi pa gñen daṅ ldan pa źes bya ba yod de | de na de bźin gśegs pa la chu’i lha źes bya bar rab tu śes so || blta na dga’ ba źes bya bar rab tu śes (262b1) so || rgyal po dam pa źes bya bar rab tu śes so || seṅge ’dul ba źes bya bar rab tu śes so || bden pa’i blo gros źes bya bar rab tu śes so || mtha’ las ’das par gśegs (2) pa źes bya bar rab tu śes so || dgyes pa źes bya bar rab tu śes so || chos kyi blo gros źes bya bar rab tu śes so || ’phrin las grub pa źes bya bar rab tu śes so || mkhas pa (3) źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa gñen daṅ ldan pa źes bya ba de na mtshan stoṅ phrag bcur de bźin gśegs pa sems can (4) rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su byaṅ phyogs logs na gliṅ bźi pa seṅge yod pa źes bya ba yod de | de na de bźin (5) gśegs pa la thub pa chen po źes bya bar rab tu śes so || dka’ thub kyis bsgrubs pa źes bya bar rab tu śes so || źiṅ la dpa’ ba źes bya bar rab tu śes so || thams (6) cad thugs su chud pa źes bya bar rab tu śes so || yid bzaṅ po źes bya bar rab tu śes so || yoṅs su dag pa źes bya bar rab tu śes so || śugs ’dzin źes bya bar rab tu (7) śes so || lda ldi bzaṅ po źes bya bar rab tu śes so || brtul źugs brñes pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa seṅge yod (263a1) pa na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs (2) chags su byaṅ śar gyi phyogs mtshams na gliṅ bźi pa rnam par brtsegs pa źes bya ba yod de | de na de bźin gśegs pa la bdud rnam par ’joms pa źes bya bar rab (3) tu śes so || yaṅ dag par ’byuṅ ba źes bya bar rab tu śes so || źi ba źes bya bar rab tu śes so || bzaṅ po lha źes bya bar rab tu śes so || ’dod chags daṅ bral (4) pa źes bya bar rab tu śes so || blo gros mchog ces bya bar rab tu śes so || thugs mñam pa źes bya bar rab tu śes so || gźan gyis mi thub pa źes bya bar rab tu śes (5) so || blo gros kyi dbyaṅs źes bya bar rab tu śes so || riṅ du bźud pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa rnam par (6) brtsegs pa źes bya ba na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs (7) chags su śar lho’i phyogs mtshams na gliṅ bźi pa dga’ ba źes bya ba yod de | de na de bźin gśegs pa la ’jigs pa źes bya bar rab tu śes so || me’i phuṅ (263b1) po źes bya bar rab tu śes so || thugs su chud pa źes bya bar rab tu śes so || khyab pa daṅ ldan pa źes bya bar rab tu śes so || mi ldan pa źes bya bar rab tu śes so || (2) raṅ bźin ’dzin pa źes bya bar rab tu śes so || rigs par spyod pa źes bya bar rab tu śes so || mig gi rgyal po źes bya bar rab tu śes so || śin tu ’phags pa źes bya (3) bar rab tu śes so || stobs kyi brtson ’grus źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa dga’ ba na mtshan stoṅ phrag bcur de bźin (4) gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su lho nub kyi phyogs mtshams na gliṅ bźi pa sñiṅ po dam pa (5) źes bya ba yod de | de na de bźin gśegs pa la mi g-yo ba źes bya bar rab tu śes so || mkhas pa’i rgyal po źes bya bar rab tu śes so || yoṅs su rgyas pa źes bya bar rab (6) tu śes so || mi bskyod pa źes bya bar rab tu śes so || mdzes pa’i spyan can źes bya bar rab tu śes so || rgyal po’i mchog ces bya bar rab tu śes so || dbyaṅs kyi dbaṅ phyug (7) ces bya bar rab tu śes so || thams cad gtoṅ ba źes bya bar rab tu śes so || draṅ sroṅ ’dzin pa źes bya bar rab tu śes so || ri rab dpal źes bya bar rab tu śes te | kye rgyal (264a1) ba’i sras dag | gliṅ bźi pa sñiṅ po dam pa na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i (2) sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su nub byaṅ gi phyogs mtshams na gliṅ bźi pa sa bzaṅ po źes bya ba yod de | de na de bźin gśegs pa la yaṅ dag (3) pa’i mtha’ źes bya bar rab tu śes so || ’od ’phro ba daṅ ldan pa źes bya bar rab tu śes so || rin po che’i gtsug phud ces bya bar rab tu śes so || dran par bya ba źes (4) bya bar rab tu śes so || don gyi mchog ces bya bar rab tu śes so || śin tu bźad pa źes bya bar rab tu śes so || rigs gtsaṅ ma źes bya bar rab tu śes so || ’od (5) kyi dkyil ’khor ces bya bar rab tu śes so || phyag śin tu ’phyaṅ ba źes bya bar rab tu śes so || thog mar rab tu gnas pa źes bya bar rab tu śes te | kye rgyal ba’i sras (6) dag | de dag la sogs pa gliṅ bźi pa sa bzaṅ po na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | (7) gliṅ bźi pa ’di daṅ ’dabs chags su ’og logs na gliṅ bźi pa ’od ’phro ba daṅ ldan pa źes bya ba yod de | de na de bźin gśegs pa la śin tu grub pa źes bya (264b1) bar rab tu śes so || seṅge’i kha dog ces bya bar rab tu śes so || rno ba źes bya bar rab tu śes so || gser gyi ’od ’phro ba źes bya bar rab tu śes so || thams cad kyi bśes gñen (2) źes bya bar rab tu śes so || gsuṅ mthar thug pa źes bya bar rab tu śes so || phan pa mdzad pa źes bya bar rab tu śes so || mthar thug pa źes bya bar rab tu śes so || lha ma nor (3) ba źes bya bar rab tu śes so || sbyin pa sñoms pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa ’od ’phro ba daṅ ldan pa na mtshan stoṅ phrag (4) bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su steṅ logs na gliṅ bźi pa nor ’dzin (5) ces bya ba yod de | de na de bźin gśegs pa la blo gros daṅ ldan pa źes bya bar rab tu śes so || źal dag pa źes bya bar rab tu śes so || bśes gñen daṅ ldan pa źes bya (6) bar rab tu śes so || thog mar gśegs pa źes bya bar rab tu śes so || byin rnam par bkod pa źes bya bar rab tu śes so || dga’ bar mdzad pa źes bya bar rab tu śes so || (7) dgoṅs pa grub pa źes bya bar rab tu śes so || me źes bya bar rab tu śes so || tshul khrims daṅ ldan pa źes bya bar rab tu śes so || gcig la brten pa źes bya bar rab tu (265a1) śes te | kye rgyal ba’i sras dag de dag la sogs pa gliṅ bźi pa nor ’dzin na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab (2) tu śes so || <br/><br/> kye rgyal ba’i sras dag | de ltar de dag la sogs pa ’jig rten gyi khams mi mjed ’di na gliṅ bźi pa’i ’jig rten gyi khams bye ba phrag brgya yod de | de dag (3) kun na yaṅ de bźin gśegs pa la mtshan gźan daṅ gźan gyis brjod de | mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes (4) so || <br/><br/> kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su śar phyogs logs na ’jig rten gyi khams khebs pa daṅ ldan pa źes bya ba yod de | (5) de na de bźin gśegs pa la mñam pa źes bya bar rab tu śes so || ’phags pa lhag pa źes bya bar rab tu śes so || dbugs phyin pa źes bya bar rab tu śes so || bsam (6) pa grol ba źes bya bar rab tu śes so || ñan pa’i bdag po źes bya bar rab tu śes so || khyab par bźugs pa źes bya bar rab tu śes so || dbaṅ du gyur pa źes bya bar (7) rab tu śes so || s’a la’i lhun źes bya bar rab tu śes so || rtsal chen po źes bya bar rab tu śes so || blo ’dra ba med pa źes bya bar rab tu śes te | kye rgyal ba’i sras (265b1) dag | de dag la sogs pa ’jig rten gyi khams khebs pa daṅ ldan pa na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyi rab tu śes so || <br/><br/> kye rgyal ba’i (2) sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su lho phyogs logs na ’jig rten gyi khams lhag pa źes bya ba yod de | de na de bźin gśegs pa la raṅ bźin (3) thugs su chud ces bya bar rab tu śes so || bsam pa grol ba źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams lhag pa na mtshan bye (4) ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su nub phyogs (5) logs na ’jig rten gyi khams rdul bsal ba źes bya ba yod de | de na de bźin gśegs pa la dgoṅs pa daṅ ldan pa źes bya bar rab tu śes so || lam rnam par bsgoms pa (6) źes bya bar rab tu śes so || brtan pa’i gźi źes bya bar rab tu śes so || khyab ciṅ grol ba źes bya bar rab tu śes so || don mkhyen pa źes bya bar rab tu śes so || bye (7) brag la dgyes pa źes bya bar rab tu śes so || gzigs pa dam pa źes bya bar rab tu śes so || ’dul ba thugs su chud pa źes bya bar rab tu śes so || kun tu sñoms pa źes (266a1) bya bar rab tu śes so || dgyes pa daṅ ldan pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams rdul (2) bsal ba na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ (3) ’dabs chags su byaṅ phyogs logs na ’jig rten gyi khams rnam par byuṅ ba źes bya ba yod de | de na de bźin gśegs pa la tsam pa ka’i kha dog ces bya bar rab tu śes (4) so || ñi ma’i sñiṅ po źes bya bar rab tu śes so || mthu śin tu gnas pa źes bya bar rab tu śes so || byin gyi rlabs yaṅ dag par ’byuṅ ba źes bya bar rab tu śes so || (5) raṅ bźin dam pa źes bya bar rab tu śes so || blo gros kyi ñi ma źes bya bar rab tu śes so || thogs pa med pa źes bya bar rab tu śes so || zla ba śar ba źes bya bar rab tu (6) śes so || rluṅ gi śugs źes bya bar rab tu śes so || sgra śin tu gsal ba źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams (7) rnam par byuṅ ba na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed (266b1) ’di daṅ ’dabs chags su byaṅ śar gyi phyogs mtshams logs na ’jig rten gyi khams ’pho bar byed pa źes bya ba yod de | de na de bźin gśegs pa la sdug bsṅal daṅ (2) bral ba źes bya bar rab tu śes so || thams cad las grol ba źes bya bar rab tu śes so || rgyu daṅ ldan pa źes bya bar rab tu śes so || grol źiṅ mkhas pa źes bya bar rab tu (3) śes so || ’das pa’i gter źes bya bar rab tu śes so || rin po che’i ’od ces bya bar rab tu śes so || ’jig rten ston pa źes bya bar rab tu śes so || gnas med pa’i sa thugs (4) su chud pa źes bya bar rab tu śes so || dad pa’i sñiṅ po źes bya bar rab tu śes so || thugs mi sgul ba źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa (5) ’jig rten gyi khams ’pho bar byed pa na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | ’jig rten gyi khams (6) mi mjed ’di daṅ ’dabs chags su śar lho’i phyogs mtshams na ’jig rten gyi khams phan pa źes bya ba yod de | de na de bźin gśegs pa la rab tu ’joms pa źes bya bar (7) rab tu śes so || byaṅ ba thugs su chud pa źes bya bar rab tu śes so || gsuṅ sñan pa źes bya bar rab tu śes so || rtsa ba khyad du ’phags pa źes bya bar rab tu śes so || rgyun (267a1) gyi gdugs źes bya bar rab tu śes so || rgyu śin tu sbyaṅs pa źes bya bar rab tu śes so || rnam par phye ba’i pha rol tu phyin pa źes bya bar rab (2) tu śes so || dam pa’i bsam gtan mṅa’ ba źes bya bar rab tu śes so || ran par gsuṅ ba źes bya bar rab tu śes so || blo rgya mtsho źes bya bar rab tu śes te | kye rgyal (3) ba’i sras dag | de dag la sogs pa ’jig rten gyi khams phan pa na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal (4) ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su lho nub kyi phyogs mtshams na ’jig rten gyi khams kun tu soṅ ba źes bya ba yod de | de na de bźin (5) gśegs pa la thub pa’i dbaṅ po źes bya bar rab tu śes so || mṅon par sel ba źes bya bar rab tu śes so || dus las śin tu grol ba źes bya bar rab tu śes so || ṅo bo (6) ñid yoṅs su mkhyen pa źes bya bar rab tu śes so || bka’ ñams pa med pa źes bya bar rab tu śes so || skal pa mñam pa med par gzigs pa źes bya bar rab tu śes so || (7) dbaṅ phyug gi dam pa źes bya bar rab tu śes so || draṅ sroṅ ston pa źes bya bar rab tu śes so || ’phrin las brtsams pa źes bya bar rab tu śes so || rdo rje’i seṅge źes bya (267b1) bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams kun tu soṅ ba na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis (2) rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su nub byaṅ gi phyogs mtshams na ’jig rten gyi khams yoṅs su dga’ ba źes (3) bya ba yod de | de na de bźin gśegs pa la me tog yaṅ dag par brtsegs pa źes bya bar rab tu śes so || tsandan gyi gdugs źes bya bar rab tu śes so || padmo’i sñiṅ po źes bya (4) bar rab tu śes so || śin tu ’das pa’i chos źes bya bar rab tu śes so || chos kyi ldum bu źes bya bar rab tu śes so || śin tu ’phags pa źes bya bar rab tu śes so || śin tu (5) sbyaṅs pa’i gdugs źes bya bar rab tu śes so || spyan śin tu yaṅs pa źes bya bar rab tu śes so || tshul bzaṅ po daṅ ldan pa źes bya bar rab tu śes so || chos rtse gcig ces (6) bya bar rab tu śes so || dra ba’i sñiṅ po źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams yoṅs su dga’ ba na mtshan bye ba brgya stoṅ phrag bcur de (7) bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su ’og gi phyogs na ’jig rten gyi khams mi che ba źes bya ba (268a1) yod de | de na de bźin gśegs pa la ’od ’phro ’gyed pa źes bya bar rab tu śes so || śin tu ’dul ba źes bya bar rab tu śes so || dbaṅ po’i mtshon (2) cha źes bya bar rab tu śes so || mi rtag pa źes bya bar rab tu śes so || rtsa ba thugs su chud pa źes bya bar rab tu śes so || ’phro ba med pa źes bya bar rab tu śes so || rluṅ (3) daṅ mñam pa źes bya bar rab tu śes so || gtoṅ ba la mos pa źes bya bar rab tu śes so || lam śin tu brtags pa źes bya bar rab tu śes so || ’joms pa’i rgyal (4) mtshan źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams mi che ba na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa (5) sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su steṅ gi phyogs na ’jig rten gyi khams dbyaṅs (6) sgrog pa źes bya ba yod de | de na de bźin gśegs pa la dpa’ ba’i rgyal mtshan źes bya bar rab tu śes so || rin po che tshad med pa źes bya bar rab tu śes so || mchod (7) sbyin la brtson pa źes bya bar rab tu śes so || lha’i ’od ces bya bar rab tu śes so || dpal ’byuṅ pa źes bya bar rab tu śes so || ’khor las ’phags pa źes bya bar (268b1) rab tu śes so || thams cad kyi bdag po źes bya bar rab tu śes so || ’khor lo mi ldog pa źes bya bar rab tu śes so || bya ba daṅ bźud pa med pa źes bya bar rab tu śes so || (2) thams cad mkhyen pas śin tu grol ba źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams dbyaṅs sgrog pa na mtshan bye ba brgya stoṅ phrag (3) bcur de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> kye rgyal ba’i sras dag | ji ltar ’jig rten gyi khams mi mjed ’di na de bźin gśegs pa sems can rnams (4) kyis rab tu śes pa de bźin du śar phyogs kyi ’jig rten gyi khams bye ba brgya stoṅ tshad med pa | graṅs med pa | dpag tu med pa | bsam gyis mi khyab pa | mtshuṅs pa med pa | kun (5) tu mtha’ yas pa | mu med pa | sa mtshams med pa | brjod du med pa | chos kyi dbyiṅs kyis klas pa | nam mkha’i dbyiṅs kyi mthas gtugs pa’i ’jig rten gyi khams thams cad na (6) yaṅ de bźin gśegs pa sems can rnams kyis rab tu śes so || <br/><br/> gźuṅ de ltar lho phyogs daṅ | de bźin du nub phyogs daṅ | de bźin du byaṅ phyogs daṅ | de bźin du byaṅ (7) śar gyi phyogs mtshams daṅ | de bźin du śar lho’i phyogs mtshams daṅ | de bźin du lho nub kyi phyogs mtshams daṅ | de bźin du nub byaṅ gi phyogs mtshams daṅ (269a1) de bźin du ’og gi phyogs daṅ | de bźin du steṅ gi phyogs kyi ’jig rten gyi khams bye ba brgya stoṅ tshad med pa | graṅs med pa | dpag tu (2) med pa | bsam gyis mi khyab pa | mtshuṅs pa med pa | kun tu mtha’ yas pa | mu med pa | sa mtshams med pa | brjod du med pa | chos kyi dbyiṅs kyis klas pa | nam (3) mkha’i dbyiṅs kyi mthas gtugs pa’i ’jig rten gyi khams thams cad na yaṅ de bźin gśegs pa sems can rnams kyis rab tu śes te | sṅon bcom ldan ’das (4) kyis byaṅ chub sems dpar gyur pa’i tshe yoṅs su smin par mdzad pa de dag gis ni | spyod pa rnam pa tha dad pa daṅ | gsuṅ gi rnam pa tha dad pa daṅ | ṅa ro rnam pa tha dad (5) pa daṅ | ’phrin las rnam pa tha dad pa daṅ | rnam par smin pa rnam pa tha dad pa daṅ | skye mched rnam pa tha dad pa daṅ | sbyor ba rnam pa tha dad pa daṅ | dbaṅ po rnam pa (6) tha dad pa daṅ | mos pa rnam pa tha dad pa daṅ | skye mched rab tu thob pa gźan daṅ gźan gyis sems can rnams la chos yoṅs su bstan pa’aṅ rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842752bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842205bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842479bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843027bi' class='paragraph'>
+							de ci’i phyir źe na | kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di (4) ñid daṅ | de ma yin pa’i gliṅ bźi pa gźan dag na’aṅ sku gźan daṅ gźan | mtshan gźan daṅ gźan | kha dog daṅ dbyibs gźan daṅ gźan | chu źeṅ gźan daṅ (5) gźan | sku tshe’i tshad gźan daṅ gźan | skye mched brñes pa gźan daṅ gźan | dbaṅ po brñes pa gźan daṅ gźan | ’byuṅ ba’i skye mched gźan daṅ gźan | sku (6) gzugs gźan daṅ gźan du de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842753bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842206bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842480bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843028bi' class='paragraph'>
+							de ci’i phyir źe na | kye rgyal ba’i sras dag | ’jig rten gyi khams gliṅ (7) bźi pa bcom pa daṅ ldan pa źes bya ba ’di ñid na’aṅ de bźin gśegs pa la don thams cad grub pa źes bya bar rab tu śes so || zla ba’i dkyil ’khor źes bya bar (261b1) rab tu śes so || seṅge’i ṅa ro can źes bya bar rab tu śes so || ś’akya thub pa źes bya bar rab tu śes so || draṅ sroṅ dam pa’i mchog ces bya bar rab tu śes so || rnam par snaṅ (2) mdzad ces bya bar rab tu śes so || go’u ta ma’i rigs źes bya bar rab tu śes so || dge sbyoṅ chen po źes bya bar rab tu śes so || rgyal ba dam pa źes bya bar rab tu śes so || (3) mu stegs byed ces bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams gliṅ bźi pa bcom pa daṅ ldan pa na mtshan stoṅ phrag bcur de bźin (4) gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842754bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842207bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842481bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843029bi' class='paragraph'>
+							kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su śar phyogs logs na gliṅ bźi pa śin tu bsruṅs (5) pa źes bya ba yod de | de na de bźin gśegs pa la rdo rje źes bya bar rab tu śes so || dbaṅ phyug ces bya bar rab tu śes so || blo gros mṅa’ ba źes bya bar rab tu śes so || (6) thub par dka’ ba źes bya bar rab tu śes so || sprin gyi rgyal po źes bya bar rab tu śes so || ñon moṅs pa med pa źes bya bar rab tu śes so || skyabs mdzad pa źes bya bar rab (7) tu śes so || thugs dgyes pa źes bya bar rab tu śes so || mtshuṅs pa med pa źes bya bar rab tu śes so || tshig gcod pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag (262a1) de dag la sogs pa gliṅ bźi pa śin tu bsruṅs pa źes bya ba na de bźin gśegs pa la mtshan stoṅ phrag bcur sems can rnams kyis rab tu śes (2) so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842755bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842208bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842482bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843030bi' class='paragraph'>
+							kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su lho phyogs logs na gliṅ bźi pa bzod par dka’ ba źes bya ba yod de | de na de bźin gśegs pa la (3) dbaṅ po źes bya bar rab tu śes so || nor grags źes bya bar rab tu śes so || dri ma med pa źes bya bar rab tu śes so || yaṅ dag par gsuṅ ba źes bya bar rab tu śes so || (4) ’dul ba źes bya bar rab tu śes so || dgyes pa mṅa’ ba źes bya bar rab tu śes so || rnam par grags pa źes bya bar rab tu śes so || don mdzad pa źes bya bar rab tu śes (5) so || mtha’ yas pa źes bya bar rab tu śes so || dpal daṅ ldan pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa bzod par dka’ (6) ba na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842756bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842209bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842483bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843031bi' class='paragraph'>
+							kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su nub phyogs (7) logs na gliṅ bźi pa gñen daṅ ldan pa źes bya ba yod de | de na de bźin gśegs pa la chu’i lha źes bya bar rab tu śes so || blta na dga’ ba źes bya bar rab tu śes (262b1) so || rgyal po dam pa źes bya bar rab tu śes so || seṅge ’dul ba źes bya bar rab tu śes so || bden pa’i blo gros źes bya bar rab tu śes so || mtha’ las ’das par gśegs (2) pa źes bya bar rab tu śes so || dgyes pa źes bya bar rab tu śes so || chos kyi blo gros źes bya bar rab tu śes so || ’phrin las grub pa źes bya bar rab tu śes so || mkhas pa (3) źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa gñen daṅ ldan pa źes bya ba de na mtshan stoṅ phrag bcur de bźin gśegs pa sems can (4) rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842757bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842210bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842484bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843032bi' class='paragraph'>
+							kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su byaṅ phyogs logs na gliṅ bźi pa seṅge yod pa źes bya ba yod de | de na de bźin (5) gśegs pa la thub pa chen po źes bya bar rab tu śes so || dka’ thub kyis bsgrubs pa źes bya bar rab tu śes so || źiṅ la dpa’ ba źes bya bar rab tu śes so || thams (6) cad thugs su chud pa źes bya bar rab tu śes so || yid bzaṅ po źes bya bar rab tu śes so || yoṅs su dag pa źes bya bar rab tu śes so || śugs ’dzin źes bya bar rab tu (7) śes so || lda ldi bzaṅ po źes bya bar rab tu śes so || brtul źugs brñes pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa seṅge yod (263a1) pa na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842758bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842211bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842485bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843033bi' class='paragraph'>
+							kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs (2) chags su byaṅ śar gyi phyogs mtshams na gliṅ bźi pa rnam par brtsegs pa źes bya ba yod de | de na de bźin gśegs pa la bdud rnam par ’joms pa źes bya bar rab (3) tu śes so || yaṅ dag par ’byuṅ ba źes bya bar rab tu śes so || źi ba źes bya bar rab tu śes so || bzaṅ po lha źes bya bar rab tu śes so || ’dod chags daṅ bral (4) pa źes bya bar rab tu śes so || blo gros mchog ces bya bar rab tu śes so || thugs mñam pa źes bya bar rab tu śes so || gźan gyis mi thub pa źes bya bar rab tu śes (5) so || blo gros kyi dbyaṅs źes bya bar rab tu śes so || riṅ du bźud pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa rnam par (6) brtsegs pa źes bya ba na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842759bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842212bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842486bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843034bi' class='paragraph'>
+							kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs (7) chags su śar lho’i phyogs mtshams na gliṅ bźi pa dga’ ba źes bya ba yod de | de na de bźin gśegs pa la ’jigs pa źes bya bar rab tu śes so || me’i phuṅ (263b1) po źes bya bar rab tu śes so || thugs su chud pa źes bya bar rab tu śes so || khyab pa daṅ ldan pa źes bya bar rab tu śes so || mi ldan pa źes bya bar rab tu śes so || (2) raṅ bźin ’dzin pa źes bya bar rab tu śes so || rigs par spyod pa źes bya bar rab tu śes so || mig gi rgyal po źes bya bar rab tu śes so || śin tu ’phags pa źes bya (3) bar rab tu śes so || stobs kyi brtson ’grus źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa dga’ ba na mtshan stoṅ phrag bcur de bźin (4) gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842760bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842213bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842487bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843035bi' class='paragraph'>
+							kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su lho nub kyi phyogs mtshams na gliṅ bźi pa sñiṅ po dam pa (5) źes bya ba yod de | de na de bźin gśegs pa la mi g-yo ba źes bya bar rab tu śes so || mkhas pa’i rgyal po źes bya bar rab tu śes so || yoṅs su rgyas pa źes bya bar rab (6) tu śes so || mi bskyod pa źes bya bar rab tu śes so || mdzes pa’i spyan can źes bya bar rab tu śes so || rgyal po’i mchog ces bya bar rab tu śes so || dbyaṅs kyi dbaṅ phyug (7) ces bya bar rab tu śes so || thams cad gtoṅ ba źes bya bar rab tu śes so || draṅ sroṅ ’dzin pa źes bya bar rab tu śes so || ri rab dpal źes bya bar rab tu śes te | kye rgyal (264a1) ba’i sras dag | gliṅ bźi pa sñiṅ po dam pa na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842761bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842214bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842488bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843036bi' class='paragraph'>
+							kye rgyal ba’i (2) sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su nub byaṅ gi phyogs mtshams na gliṅ bźi pa sa bzaṅ po źes bya ba yod de | de na de bźin gśegs pa la yaṅ dag (3) pa’i mtha’ źes bya bar rab tu śes so || ’od ’phro ba daṅ ldan pa źes bya bar rab tu śes so || rin po che’i gtsug phud ces bya bar rab tu śes so || dran par bya ba źes (4) bya bar rab tu śes so || don gyi mchog ces bya bar rab tu śes so || śin tu bźad pa źes bya bar rab tu śes so || rigs gtsaṅ ma źes bya bar rab tu śes so || ’od (5) kyi dkyil ’khor ces bya bar rab tu śes so || phyag śin tu ’phyaṅ ba źes bya bar rab tu śes so || thog mar rab tu gnas pa źes bya bar rab tu śes te | kye rgyal ba’i sras (6) dag | de dag la sogs pa gliṅ bźi pa sa bzaṅ po na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842762bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842215bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842489bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843037bi' class='paragraph'>
+							kye rgyal ba’i sras dag | (7) gliṅ bźi pa ’di daṅ ’dabs chags su ’og logs na gliṅ bźi pa ’od ’phro ba daṅ ldan pa źes bya ba yod de | de na de bźin gśegs pa la śin tu grub pa źes bya (264b1) bar rab tu śes so || seṅge’i kha dog ces bya bar rab tu śes so || rno ba źes bya bar rab tu śes so || gser gyi ’od ’phro ba źes bya bar rab tu śes so || thams cad kyi bśes gñen (2) źes bya bar rab tu śes so || gsuṅ mthar thug pa źes bya bar rab tu śes so || phan pa mdzad pa źes bya bar rab tu śes so || mthar thug pa źes bya bar rab tu śes so || lha ma nor (3) ba źes bya bar rab tu śes so || sbyin pa sñoms pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa gliṅ bźi pa ’od ’phro ba daṅ ldan pa na mtshan stoṅ phrag (4) bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842763bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842216bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842490bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843038bi' class='paragraph'>
+							kye rgyal ba’i sras dag | gliṅ bźi pa ’di daṅ ’dabs chags su steṅ logs na gliṅ bźi pa nor ’dzin (5) ces bya ba yod de | de na de bźin gśegs pa la blo gros daṅ ldan pa źes bya bar rab tu śes so || źal dag pa źes bya bar rab tu śes so || bśes gñen daṅ ldan pa źes bya (6) bar rab tu śes so || thog mar gśegs pa źes bya bar rab tu śes so || byin rnam par bkod pa źes bya bar rab tu śes so || dga’ bar mdzad pa źes bya bar rab tu śes so || (7) dgoṅs pa grub pa źes bya bar rab tu śes so || me źes bya bar rab tu śes so || tshul khrims daṅ ldan pa źes bya bar rab tu śes so || gcig la brten pa źes bya bar rab tu (265a1) śes te | kye rgyal ba’i sras dag de dag la sogs pa gliṅ bźi pa nor ’dzin na mtshan stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab (2) tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842764bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842217bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842491bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843039bi' class='paragraph'>
+							kye rgyal ba’i sras dag | de ltar de dag la sogs pa ’jig rten gyi khams mi mjed ’di na gliṅ bźi pa’i ’jig rten gyi khams bye ba phrag brgya yod de | de dag (3) kun na yaṅ de bźin gśegs pa la mtshan gźan daṅ gźan gyis brjod de | mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes (4) so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842765bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842218bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842492bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843040bi' class='paragraph'>
+							kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su śar phyogs logs na ’jig rten gyi khams khebs pa daṅ ldan pa źes bya ba yod de | (5) de na de bźin gśegs pa la mñam pa źes bya bar rab tu śes so || ’phags pa lhag pa źes bya bar rab tu śes so || dbugs phyin pa źes bya bar rab tu śes so || bsam (6) pa grol ba źes bya bar rab tu śes so || ñan pa’i bdag po źes bya bar rab tu śes so || khyab par bźugs pa źes bya bar rab tu śes so || dbaṅ du gyur pa źes bya bar (7) rab tu śes so || s’a la’i lhun źes bya bar rab tu śes so || rtsal chen po źes bya bar rab tu śes so || blo ’dra ba med pa źes bya bar rab tu śes te | kye rgyal ba’i sras (265b1) dag | de dag la sogs pa ’jig rten gyi khams khebs pa daṅ ldan pa na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyi rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842766bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842219bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842493bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843041bi' class='paragraph'>
+							kye rgyal ba’i (2) sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su lho phyogs logs na ’jig rten gyi khams lhag pa źes bya ba yod de | de na de bźin gśegs pa la raṅ bźin (3) thugs su chud ces bya bar rab tu śes so || bsam pa grol ba źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams lhag pa na mtshan bye (4) ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842767bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842220bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842494bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843042bi' class='paragraph'>
+							kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su nub phyogs (5) logs na ’jig rten gyi khams rdul bsal ba źes bya ba yod de | de na de bźin gśegs pa la dgoṅs pa daṅ ldan pa źes bya bar rab tu śes so || lam rnam par bsgoms pa (6) źes bya bar rab tu śes so || brtan pa’i gźi źes bya bar rab tu śes so || khyab ciṅ grol ba źes bya bar rab tu śes so || don mkhyen pa źes bya bar rab tu śes so || bye (7) brag la dgyes pa źes bya bar rab tu śes so || gzigs pa dam pa źes bya bar rab tu śes so || ’dul ba thugs su chud pa źes bya bar rab tu śes so || kun tu sñoms pa źes (266a1) bya bar rab tu śes so || dgyes pa daṅ ldan pa źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams rdul (2) bsal ba na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842768bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842221bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842495bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843043bi' class='paragraph'>
+							kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ (3) ’dabs chags su byaṅ phyogs logs na ’jig rten gyi khams rnam par byuṅ ba źes bya ba yod de | de na de bźin gśegs pa la tsam pa ka’i kha dog ces bya bar rab tu śes (4) so || ñi ma’i sñiṅ po źes bya bar rab tu śes so || mthu śin tu gnas pa źes bya bar rab tu śes so || byin gyi rlabs yaṅ dag par ’byuṅ ba źes bya bar rab tu śes so || (5) raṅ bźin dam pa źes bya bar rab tu śes so || blo gros kyi ñi ma źes bya bar rab tu śes so || thogs pa med pa źes bya bar rab tu śes so || zla ba śar ba źes bya bar rab tu (6) śes so || rluṅ gi śugs źes bya bar rab tu śes so || sgra śin tu gsal ba źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams (7) rnam par byuṅ ba na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842769bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842222bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842496bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843044bi' class='paragraph'>
+							kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed (266b1) ’di daṅ ’dabs chags su byaṅ śar gyi phyogs mtshams logs na ’jig rten gyi khams ’pho bar byed pa źes bya ba yod de | de na de bźin gśegs pa la sdug bsṅal daṅ (2) bral ba źes bya bar rab tu śes so || thams cad las grol ba źes bya bar rab tu śes so || rgyu daṅ ldan pa źes bya bar rab tu śes so || grol źiṅ mkhas pa źes bya bar rab tu (3) śes so || ’das pa’i gter źes bya bar rab tu śes so || rin po che’i ’od ces bya bar rab tu śes so || ’jig rten ston pa źes bya bar rab tu śes so || gnas med pa’i sa thugs (4) su chud pa źes bya bar rab tu śes so || dad pa’i sñiṅ po źes bya bar rab tu śes so || thugs mi sgul ba źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa (5) ’jig rten gyi khams ’pho bar byed pa na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842770bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842223bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842497bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843045bi' class='paragraph'>
+							kye rgyal ba’i sras dag | ’jig rten gyi khams (6) mi mjed ’di daṅ ’dabs chags su śar lho’i phyogs mtshams na ’jig rten gyi khams phan pa źes bya ba yod de | de na de bźin gśegs pa la rab tu ’joms pa źes bya bar (7) rab tu śes so || byaṅ ba thugs su chud pa źes bya bar rab tu śes so || gsuṅ sñan pa źes bya bar rab tu śes so || rtsa ba khyad du ’phags pa źes bya bar rab tu śes so || rgyun (267a1) gyi gdugs źes bya bar rab tu śes so || rgyu śin tu sbyaṅs pa źes bya bar rab tu śes so || rnam par phye ba’i pha rol tu phyin pa źes bya bar rab (2) tu śes so || dam pa’i bsam gtan mṅa’ ba źes bya bar rab tu śes so || ran par gsuṅ ba źes bya bar rab tu śes so || blo rgya mtsho źes bya bar rab tu śes te | kye rgyal (3) ba’i sras dag | de dag la sogs pa ’jig rten gyi khams phan pa na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842771bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842224bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842498bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843046bi' class='paragraph'>
+							kye rgyal (4) ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su lho nub kyi phyogs mtshams na ’jig rten gyi khams kun tu soṅ ba źes bya ba yod de | de na de bźin (5) gśegs pa la thub pa’i dbaṅ po źes bya bar rab tu śes so || mṅon par sel ba źes bya bar rab tu śes so || dus las śin tu grol ba źes bya bar rab tu śes so || ṅo bo (6) ñid yoṅs su mkhyen pa źes bya bar rab tu śes so || bka’ ñams pa med pa źes bya bar rab tu śes so || skal pa mñam pa med par gzigs pa źes bya bar rab tu śes so || (7) dbaṅ phyug gi dam pa źes bya bar rab tu śes so || draṅ sroṅ ston pa źes bya bar rab tu śes so || ’phrin las brtsams pa źes bya bar rab tu śes so || rdo rje’i seṅge źes bya (267b1) bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams kun tu soṅ ba na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa sems can rnams kyis (2) rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842772bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842225bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842499bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843047bi' class='paragraph'>
+							kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su nub byaṅ gi phyogs mtshams na ’jig rten gyi khams yoṅs su dga’ ba źes (3) bya ba yod de | de na de bźin gśegs pa la me tog yaṅ dag par brtsegs pa źes bya bar rab tu śes so || tsandan gyi gdugs źes bya bar rab tu śes so || padmo’i sñiṅ po źes bya (4) bar rab tu śes so || śin tu ’das pa’i chos źes bya bar rab tu śes so || chos kyi ldum bu źes bya bar rab tu śes so || śin tu ’phags pa źes bya bar rab tu śes so || śin tu (5) sbyaṅs pa’i gdugs źes bya bar rab tu śes so || spyan śin tu yaṅs pa źes bya bar rab tu śes so || tshul bzaṅ po daṅ ldan pa źes bya bar rab tu śes so || chos rtse gcig ces (6) bya bar rab tu śes so || dra ba’i sñiṅ po źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams yoṅs su dga’ ba na mtshan bye ba brgya stoṅ phrag bcur de (7) bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842773bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842226bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842500bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843048bi' class='paragraph'>
+							kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su ’og gi phyogs na ’jig rten gyi khams mi che ba źes bya ba (268a1) yod de | de na de bźin gśegs pa la ’od ’phro ’gyed pa źes bya bar rab tu śes so || śin tu ’dul ba źes bya bar rab tu śes so || dbaṅ po’i mtshon (2) cha źes bya bar rab tu śes so || mi rtag pa źes bya bar rab tu śes so || rtsa ba thugs su chud pa źes bya bar rab tu śes so || ’phro ba med pa źes bya bar rab tu śes so || rluṅ (3) daṅ mñam pa źes bya bar rab tu śes so || gtoṅ ba la mos pa źes bya bar rab tu śes so || lam śin tu brtags pa źes bya bar rab tu śes so || ’joms pa’i rgyal (4) mtshan źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams mi che ba na mtshan bye ba brgya stoṅ phrag bcur de bźin gśegs pa (5) sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842774bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842227bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842501bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843049bi' class='paragraph'>
+							kye rgyal ba’i sras dag | ’jig rten gyi khams mi mjed ’di daṅ ’dabs chags su steṅ gi phyogs na ’jig rten gyi khams dbyaṅs (6) sgrog pa źes bya ba yod de | de na de bźin gśegs pa la dpa’ ba’i rgyal mtshan źes bya bar rab tu śes so || rin po che tshad med pa źes bya bar rab tu śes so || mchod (7) sbyin la brtson pa źes bya bar rab tu śes so || lha’i ’od ces bya bar rab tu śes so || dpal ’byuṅ pa źes bya bar rab tu śes so || ’khor las ’phags pa źes bya bar (268b1) rab tu śes so || thams cad kyi bdag po źes bya bar rab tu śes so || ’khor lo mi ldog pa źes bya bar rab tu śes so || bya ba daṅ bźud pa med pa źes bya bar rab tu śes so || (2) thams cad mkhyen pas śin tu grol ba źes bya bar rab tu śes te | kye rgyal ba’i sras dag | de dag la sogs pa ’jig rten gyi khams dbyaṅs sgrog pa na mtshan bye ba brgya stoṅ phrag (3) bcur de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842775bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842228bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842502bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843050bi' class='paragraph'>
+							kye rgyal ba’i sras dag | ji ltar ’jig rten gyi khams mi mjed ’di na de bźin gśegs pa sems can rnams (4) kyis rab tu śes pa de bźin du śar phyogs kyi ’jig rten gyi khams bye ba brgya stoṅ tshad med pa | graṅs med pa | dpag tu med pa | bsam gyis mi khyab pa | mtshuṅs pa med pa | kun (5) tu mtha’ yas pa | mu med pa | sa mtshams med pa | brjod du med pa | chos kyi dbyiṅs kyis klas pa | nam mkha’i dbyiṅs kyi mthas gtugs pa’i ’jig rten gyi khams thams cad na (6) yaṅ de bźin gśegs pa sems can rnams kyis rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842776bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842229bi' class='paragraph'>
+							See the previous record&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842503bi' class='paragraph'>
+							.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843051bi' class='paragraph'>
+							gźuṅ de ltar lho phyogs daṅ | de bźin du nub phyogs daṅ | de bźin du byaṅ phyogs daṅ | de bźin du byaṅ (7) śar gyi phyogs mtshams daṅ | de bźin du śar lho’i phyogs mtshams daṅ | de bźin du lho nub kyi phyogs mtshams daṅ | de bźin du nub byaṅ gi phyogs mtshams daṅ (269a1) de bźin du ’og gi phyogs daṅ | de bźin du steṅ gi phyogs kyi ’jig rten gyi khams bye ba brgya stoṅ tshad med pa | graṅs med pa | dpag tu (2) med pa | bsam gyis mi khyab pa | mtshuṅs pa med pa | kun tu mtha’ yas pa | mu med pa | sa mtshams med pa | brjod du med pa | chos kyi dbyiṅs kyis klas pa | nam (3) mkha’i dbyiṅs kyi mthas gtugs pa’i ’jig rten gyi khams thams cad na yaṅ de bźin gśegs pa sems can rnams kyis rab tu śes te | sṅon bcom ldan ’das (4) kyis byaṅ chub sems dpar gyur pa’i tshe yoṅs su smin par mdzad pa de dag gis ni | spyod pa rnam pa tha dad pa daṅ | gsuṅ gi rnam pa tha dad pa daṅ | ṅa ro rnam pa tha dad (5) pa daṅ | ’phrin las rnam pa tha dad pa daṅ | rnam par smin pa rnam pa tha dad pa daṅ | skye mched rnam pa tha dad pa daṅ | sbyor ba rnam pa tha dad pa daṅ | dbaṅ po rnam pa (6) tha dad pa daṅ | mos pa rnam pa tha dad pa daṅ | skye mched rab tu thob pa gźan daṅ gźan gyis sems can rnams la chos yoṅs su bstan pa’aṅ rab tu śes so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842777bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842230bi' class='paragraph'>
+							See the previous record&nbsp;</span><span id='8842231bi' class='paragraph'>
+						 &nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8842504bi' class='paragraph'>
+							.&nbsp;</span><span id='8842505bi' class='paragraph'>
+						 文殊師利菩薩　復有文殊師利菩薩<br/> 羅鄰師利菩薩　檀那師利菩薩<br/> 群那師利菩薩　佛陀師利菩薩<br/> 涅羅師利菩薩　惟闍師利菩薩<br/> 那師利菩薩　軷陀師利菩薩<br/> 曇摩師利菩薩<br/> 如是等菩薩。其所止佛刹。刹極快好。其刹皆各各自有名<br/> 阿栴墮還佛　阿泥羅墮還佛<br/> 阿闍陀墮還佛　阿樓那墮還佛<br/> 阿栴陀墮還佛　欝沈墮還佛<br/> 伊豆羅墮還佛　梵摩墮還佛<br/> 惟夷羅還佛<br/> 佛説兜沙經&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8843052bi' class='paragraph'>
+							śin (7) tu rgyas pa chen po’i mdo | saṅs rgyas phal po che źes bya ba las | saṅs rgyas kyi mtshan śin tu bstan pa źes bya ba’i le’u ste | bcu gñis pa’o ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8842999";
+							kilderef = "Ba-Pro BA12-Bnn, Kg Phal chen ka p.  - BA12-Bnn, Kg Phal chen ka p. ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					<span id='8843053bi' class='paragraph'>
+						 No parallels in the Tibetan, but a similar list of bodhisatvas appears in the beginning of the next chapter (191b7-192a1), as follows: “… de dag thams cad du’aṅ saṅs rgyas kyi byin gyi rlabs kyis phyogs bcu nas byaṅ chub sems dpa’ bcu bcu ‘oṅs par gyur te | byaṅ chub sems dpa’ de dag thams cad kyang ming ‘di źes bya ba dag ste | ‘di ltar ‘jam dpal daṅ | saṅs rgyas dpal dka | nor dpal daṅ | rin chen dpal daṅ | yon tan dpal daṅ | mig gi dpal daṅ | brtson ‘grus dpal daṅ | chos kyi dpal daṅ | ye śes dpal daṅ | bzaṅ po’i dpal źes bya ba dag go…”&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8842778bi' class='paragraph'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8842725";
+							kilderef = "Ba-Pro BA11-Bnn, san rec.:  - BA11-Bnn, san rec.: ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					<span id='8842779bi' class='paragraph'>
+						 &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class=''><span id='bi' class=''>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "";
+							kilderef = "  ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=e164af94-77f7-11e8-8a71-0050569f23b2</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

@@ -1,0 +1,1183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1156' accesskey='1'>BA: Proto-BA (Buddhanāmanirdeśa)</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>BA: Proto-BA (Buddhanāmanirdeśa)<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1156[6124]" value="6124" id="lancheckbox" checked >Chinese: Zhi Qian, 支謙, fl. 222-252 CE. T. 281</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1156[6125]" value="6125" id="lancheckbox" checked >Chinese: Lokakṣema, 支婁迦讖, fl. 168-189 CE (Dōushā jīng 兜沙經 group T.280, T.282, T.283)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1156[6127]" value="6127" id="lancheckbox" checked >Tibetan: BA12-Bnn, Kg Phal chen ka p.</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1156[6126]" value="6126" id="lancheckbox" checked >Sanskrit: BA11-Bnn, san rec.:</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1156">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1156">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1156'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1156">Search in BA: Proto-BA (Buddhanāmanirdeśa)</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1156'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1156'>BA: Proto-BA (Buddhanāmanirdeśa)</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1156" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="148516.Title|148517.ChapterI:Nidāna|148518.ChapterII:Praṇidhānacaryā|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_148516.Title" border=0 hspace=2><a id="href_148516.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1156&mid=1980647&level=1&cid=870550" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_148517.ChapterI:Nidāna" border=0 hspace=2><a id="href_148517.ChapterI:Nidāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1156&mid=1980648&level=1&cid=870551" class="ajax_tree0">Chapter I: Nidāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_148518.ChapterII:Praṇidhānacaryā" border=0 hspace=2><a id="href_148518.ChapterII:Praṇidhānacaryā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1156&mid=1980703&level=1&cid=870599" class="ajax_tree0">Chapter II: Praṇidhānacaryā
+</td></tr></table>
+<script language=javascript>test('148518.ChapterII:Praṇidhānacaryā|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1156&amp;mid=1980703&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1156&amp;cid=870599&amp;mid=1980703&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1156&amp;cid=870599&amp;mid=1980703&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='8842232'></div><div class='clear'></div><span id='8842232bi' class='paragraph'>
+							願行品第二&nbsp;</span><span id='8842233bi' class='paragraph'>
+						 智首菩薩。問敬首曰。本何修行。成佛聖道。身口意淨。不念人惡。亦使天下不得其短。&nbsp;</span><span id='8842234bi' class='paragraph'>
+						 仁慈至大。内性明了。殊過弟子別覺之上。一切衆邪莫能迴動。&nbsp;</span><span id='8842235bi' class='paragraph'>
+						 出生端正。色相無比。族姓尊貴。&nbsp;</span><span id='8842236bi' class='paragraph'>
+						 知重佛法。自守志強。常行四等。高才敏達。精進勇健。習衆徳本。諸度無極。所爲無量。恒生福地。&nbsp;</span><span id='8842237bi' class='paragraph'>
+						 言見信用。降心正意。攝念入禪。曉空無想不願之法。&nbsp;</span><span id='8842238bi' class='paragraph'>
+						 出入四大。五陰六入。十二縁起。七覺不閡。通十力智。博入諸道。濟危解厄。爲釋梵所敬。&nbsp;</span><span id='8842239bi' class='paragraph'>
+						 除闇冥如燭火。明天下如日月。度衆人如船師。賢過三界而爲上首。欲成斯道。當何修行&nbsp;</span><span id='8842240bi' class='paragraph'>
+						 敬首答曰。善哉佛子。志仰高遠。極大慈哀。愍傷十方。若族姓子族姓女。欲成佛道者。當先正身。言念相應。口習經典。心思可行。&nbsp;</span><span id='8842241bi' class='paragraph'>
+						 改往修來。不釋道意。積徳累善。施恩不惓。然則所問悉可得也。爲菩薩者。必諦受學。如佛法教。無得増減。以誓自要。念安世間。奉戒行願。以立徳本&nbsp;</span><span id='8842242bi' class='paragraph'>
+						 居家奉戒　當願衆生　貪欲意解　入空法中&nbsp;</span><span id='8842243bi' class='paragraph'>
+						 孝事父母　當願衆生　一切護視　使得佛道&nbsp;</span><span id='8842244bi' class='paragraph'>
+						 順教妻子　當願衆生　令出愛獄　無戀慕心&nbsp;</span><span id='8842245bi' class='paragraph'>
+						 若得五欲　當願衆生　皆入清淨　心無所著&nbsp;</span><span id='8842246bi' class='paragraph'>
+						 若在伎樂　當願衆生　悉得法樂　歡喜之忍&nbsp;</span><span id='8842247bi' class='paragraph'>
+						 著寶瓔珞　當願衆生　解去重擔　諸綺可意&nbsp;</span><span id='8842248bi' class='paragraph'>
+						 見諸婇女　當願衆生　棄捐色愛　無婬妷態&nbsp;</span><span id='8842249bi' class='paragraph'>
+						 若上樓閣　當願衆生　　皆昇法堂　受佛諸經&nbsp;</span><span id='8842250bi' class='paragraph'>
+						 身在房室 　當願衆生　覺知惡露　無有更樂&nbsp;</span><span id='8842251bi' class='paragraph'>
+						 布施所有　當願衆生　興福救之　莫墮慳貪&nbsp;</span><span id='8842252bi' class='paragraph'>
+						 See two records ahead&nbsp;</span><span id='8842253bi' class='paragraph'>
+						 若患厭家　當願衆生　疾得解脱　無所拘綴&nbsp;</span><span id='8842254bi' class='paragraph'>
+						 若棄家出　當願衆生　離苦惱罪　從正得安&nbsp;</span><span id='8842255bi' class='paragraph'>
+						 入佛宗廟　當願衆生　近佛行法　無復罣礙&nbsp;</span><span id='8842256bi' class='paragraph'>
+						 詣師友所　當願衆生　　開達入正　悉得如願&nbsp;</span><span id='8842257bi' class='paragraph'>
+						 請求捨罪　當願衆生　得成就志　學不中悔&nbsp;</span><span id='8842258bi' class='paragraph'>
+						 脱去白衣　當願衆生　解道修徳　無有懈怠&nbsp;</span><span id='8842259bi' class='paragraph'>
+						 受著袈裟　當願衆生　　被法服行　心無沾汚&nbsp;</span><span id='8842260bi' class='paragraph'>
+						 除剔鬚髮　當願衆生　除捐飾好　無有衆勞&nbsp;</span><span id='8842261bi' class='paragraph'>
+						 &nbsp;</span><span id='8842262bi' class='paragraph'>
+						 已作沙門　當願衆生　受行佛意　開導天下&nbsp;</span><span id='8842263bi' class='paragraph'>
+						 受成就戒　當願衆生　　得道方便　慧度無極&nbsp;</span><span id='8842264bi' class='paragraph'>
+						 守護道禁　當願衆生　皆奉法律　不犯法教&nbsp;</span><span id='8842265bi' class='paragraph'>
+						 始受和上　當願衆生　令如禪意　思惟解脱&nbsp;</span><span id='8842266bi' class='paragraph'>
+						 受大小師　當願衆生　　承佛聖教　所受不忘&nbsp;</span><span id='8842267bi' class='paragraph'>
+						 自歸於佛　當願衆生　體解大道　發無上意&nbsp;</span><span id='8842268bi' class='paragraph'>
+						 自歸於法　當願衆生　深入經藏　智慧如海&nbsp;</span><span id='8842269bi' class='paragraph'>
+						 自歸於僧　當願衆生　依附聖衆　從正得度&nbsp;</span><span id='8842270bi' class='paragraph'>
+						 凡開門戸　當願衆生　開現道法　至於泥洹&nbsp;</span><span id='8842271bi' class='paragraph'>
+						 關閉門戸　當願衆生　閉塞惡道　罪得除盡<br/>入室當願　一切衆生　安隱寂寞　得止觀意&nbsp;</span><span id='8842272bi' class='paragraph'>
+						 敷床當願　一切衆生　入大乘道　濟安天下&nbsp;</span><span id='8842273bi' class='paragraph'>
+						 宴坐當願　一切衆生　坐佛道樹　　心無所猗&nbsp;</span><span id='8842274bi' class='paragraph'>
+						 入衆當願　一切衆生　　成戒定慧　解度知見&nbsp;</span><span id='8842275bi' class='paragraph'>
+						 &nbsp;</span><span id='8842276bi' class='paragraph'>
+						 數息當願　一切衆生　得捨家中　無世間念&nbsp;</span><span id='8842277bi' class='paragraph'>
+						 守意當願　一切衆生　心不放逸　無有雜念&nbsp;</span><span id='8842278bi' class='paragraph'>
+						 &nbsp;</span><span id='8842279bi' class='paragraph'>
+						 早起當願　一切衆生　　覺識非常　興精進意&nbsp;</span><span id='8842280bi' class='paragraph'>
+						 下床當願　一切衆生　履踐佛迹　心不動搖&nbsp;</span><span id='8842281bi' class='paragraph'>
+						 著裳當願　一切衆生　常知慚愧　　攝意守道&nbsp;</span><span id='8842282bi' class='paragraph'>
+						 結帶當願　一切衆生　　束帶修善　志無解已&nbsp;</span><span id='8842283bi' class='paragraph'>
+						 次著中衣　當願衆生　恭敬畏愼　無有慢墮&nbsp;</span><span id='8842284bi' class='paragraph'>
+						 被上法服　當願衆生　服聖表式　敏於道行&nbsp;</span><span id='8842285bi' class='paragraph'>
+						 左右便利　當願衆生　　蠲除汚穢　無婬怒癡&nbsp;</span><span id='8842286bi' class='paragraph'>
+						 See the next record(two records following)&nbsp;</span><span id='8842287bi' class='paragraph'>
+						 已而就水　當願衆生　柔和軟弱　清淨謹飾<br/> 用水既淨　當願衆生　以法自洗　無復惡態&nbsp;</span><span id='8842288bi' class='paragraph'>
+						 手執楊枝　當願衆生　　學以法句　擿去諸垢<br/>澡漱口齒　當願衆生　　蕩滌情性　如清淨住&nbsp;</span><span id='8842289bi' class='paragraph'>
+						 See the previous record (four records ahead)&nbsp;</span><span id='8842290bi' class='paragraph'>
+						 See the previous record (three records ahead)&nbsp;</span><span id='8842291bi' class='paragraph'>
+						 盥手當願　一切衆生　得柔淨掌　執受經道&nbsp;</span><span id='8842292bi' class='paragraph'>
+						 澡面當願　一切衆生　　常向清淨　心無瑕疵&nbsp;</span><span id='8842293bi' class='paragraph'>
+						 See the following record(47 records following)&nbsp;</span><span id='8842294bi' class='paragraph'>
+						 See the following record(47 records following)&nbsp;</span><span id='8842295bi' class='paragraph'>
+						 出門當願　一切衆生　如佛所欲　出度三界&nbsp;</span><span id='8842296bi' class='paragraph'>
+						 向道當願　一切衆生　向無上道　　志不退轉&nbsp;</span><span id='8842297bi' class='paragraph'>
+						 行道當願　一切衆生　　遊於無際　不中休息&nbsp;</span><span id='8842298bi' class='paragraph'>
+						 上坂當願　一切衆生　樂昇上道　無所疑難&nbsp;</span><span id='8842299bi' class='paragraph'>
+						 下坂當願　一切衆生　深入廣博　　微妙法中&nbsp;</span><span id='8842300bi' class='paragraph'>
+						 行於曲路　當願衆生　　棄邪曲意　行不忮忮&nbsp;</span><span id='8842301bi' class='paragraph'>
+						 行於直路　當願衆生　得中正意　言無諛諂&nbsp;</span><span id='8842302bi' class='paragraph'>
+						 見風揚塵　當願衆生　經明行修　心不紛亂&nbsp;</span><span id='8842303bi' class='paragraph'>
+						 見雨淹塵　當願衆生　　大慈伏意　不起諸想&nbsp;</span><span id='8842304bi' class='paragraph'>
+						 涼息樹下　當願衆生　伏心在道　經意不疲&nbsp;</span><span id='8842305bi' class='paragraph'>
+						 &nbsp;</span><span id='8842306bi' class='paragraph'>
+						 入林澤中　當願衆生　學爲儒林　　養徒以徳&nbsp;</span><span id='8842307bi' class='paragraph'>
+						 行見高山　當願衆生　　志仰高大　積徳無厭&nbsp;</span><span id='8842308bi' class='paragraph'>
+						 行見刺棘　　當願衆生　三毒消滅　無賊害心&nbsp;</span><span id='8842309bi' class='paragraph'>
+						 得好葉樹　當願衆生　以道自蔭　　入禪三昧&nbsp;</span><span id='8842310bi' class='paragraph'>
+						 樹華繁熾　當願衆生　　三十二相　諸好滿具&nbsp;</span><span id='8842311bi' class='paragraph'>
+						 果蓏盛好　當願衆生　起道樹行　成無上果&nbsp;</span><span id='8842312bi' class='paragraph'>
+						 覩諸流水　當願衆生　得正溝流　入佛海智&nbsp;</span><span id='8842313bi' class='paragraph'>
+						 覩諸陂池　當願衆生　　一切功徳　慧行充滿&nbsp;</span><span id='8842314bi' class='paragraph'>
+						 See the next record (three records following)&nbsp;</span><span id='8842315bi' class='paragraph'>
+						 若見泉水　當願衆生　入佛淵智　所問無窮&nbsp;</span><span id='8842316bi' class='paragraph'>
+						 遙望江海　當願衆生　入深佛藏　無盡之法&nbsp;</span><span id='8842317bi' class='paragraph'>
+						 見人汲井　當願衆生　　開心受法　得一味道&nbsp;</span><span id='8842318bi' class='paragraph'>
+						 過度橋梁　當願衆生　興造法橋　度人不休&nbsp;</span><span id='8842319bi' class='paragraph'>
+						 見修園圃　當願衆生　耘除穢惡　不生欲根&nbsp;</span><span id='8842320bi' class='paragraph'>
+						 見田稻穀　當願衆生　　廣殖福徳　不爲災患&nbsp;</span><span id='8842321bi' class='paragraph'>
+						 見好園圃　當願衆生　得周滿持　道法備具&nbsp;</span><span id='8842322bi' class='paragraph'>
+						 見丘聚舍　當願衆生　常處仁智　道無危殆&nbsp;</span><span id='8842323bi' class='paragraph'>
+						 &nbsp;</span><span id='8842324bi' class='paragraph'>
+						 See the previous record (five records ahead)&nbsp;</span><span id='8842325bi' class='paragraph'>
+						 見精學堂　當願衆生　　講誦經道　日進不衰&nbsp;</span><span id='8842326bi' class='paragraph'>
+						 見人衆聚　當願衆生　功滿得佛　成弟子衆&nbsp;</span><span id='8842327bi' class='paragraph'>
+						 見人閑居　當願衆生　恬惔無爲　遊志典籍&nbsp;</span><span id='8842328bi' class='paragraph'>
+						 See the next records (23 records following)&nbsp;</span><span id='8842329bi' class='paragraph'>
+						 See the next record (23 records following)&nbsp;</span><span id='8842330bi' class='paragraph'>
+						 &nbsp;</span><span id='8842331bi' class='paragraph'>
+						 See the next record (23 records following)&nbsp;</span><span id='8842332bi' class='paragraph'>
+						 See the next record (21 records following)&nbsp;</span><span id='8842333bi' class='paragraph'>
+						 See the next record (23 records following)&nbsp;</span><span id='8842334bi' class='paragraph'>
+						 See the next record (21 records following)&nbsp;</span><span id='8842335bi' class='paragraph'>
+						 See the next record (23 records following)&nbsp;</span><span id='8842336bi' class='paragraph'>
+						 See the next record (21 records following)&nbsp;</span><span id='8842337bi' class='paragraph'>
+						 See the next record (22 records following)&nbsp;</span><span id='8842338bi' class='paragraph'>
+						 See the next record (22 records following)&nbsp;</span><span id='8842339bi' class='paragraph'>
+						 得見沙門　當願衆生　　多聞戒具　誨人不惓&nbsp;</span><span id='8842340bi' class='paragraph'>
+						 見異道人　當願衆生　遠去邪見　入八正道&nbsp;</span><span id='8842341bi' class='paragraph'>
+						 得見仙人　當願衆生　意行具足　所欲者成&nbsp;</span><span id='8842342bi' class='paragraph'>
+						 行到城郭　當願衆生　　持戒完具　心無虧缺<br/>望見宮闕　當願衆生　　聰明遠照　諸善普立&nbsp;</span><span id='8842343bi' class='paragraph'>
+						 See the next record(six records following)&nbsp;</span><span id='8842344bi' class='paragraph'>
+						 &nbsp;</span><span id='8842345bi' class='paragraph'>
+						 若見帝王　當願衆生　得奉聖化　如正道教&nbsp;</span><span id='8842346bi' class='paragraph'>
+						 見帝王子　當願衆生　　履佛子行　化生法中&nbsp;</span><span id='8842347bi' class='paragraph'>
+						 若見公卿　當願衆生　明於道理　助利天下&nbsp;</span><span id='8842348bi' class='paragraph'>
+						 見諸臣吏　當願衆生　忠正順善　無固賊心&nbsp;</span><span id='8842349bi' class='paragraph'>
+						 見被鎧甲　當願衆生　　誓被法鎧　不違本願<br/>見魯鈍人　當願衆生　　勇於道義　成四無畏&nbsp;</span><span id='8842350bi' class='paragraph'>
+						 See the previous record(eight records ahead)&nbsp;</span><span id='8842351bi' class='paragraph'>
+						 見憂愁人　當願衆生　離諸恐怖　無復憂戚&nbsp;</span><span id='8842352bi' class='paragraph'>
+						 見喜笑人　當願衆生　　捨非常樂　五欲自娯&nbsp;</span><span id='8842353bi' class='paragraph'>
+						 見勤苦人　當願衆生　得泥洹道　免度諸厄&nbsp;</span><span id='8842354bi' class='paragraph'>
+						 見安樂人　當願衆生　安快如佛　惔怕無患&nbsp;</span><span id='8842355bi' class='paragraph'>
+						 見疾病人　當願衆生　　知空非身　無苦痛意&nbsp;</span><span id='8842356bi' class='paragraph'>
+						 見強健人　當願衆生　得金剛形　無有衰耗&nbsp;</span><span id='8842357bi' class='paragraph'>
+						 見醜陋人　當願衆生　去醜惡行　以善自嚴&nbsp;</span><span id='8842358bi' class='paragraph'>
+						 見端正人　當願衆生　　意行質直　愛好道法&nbsp;</span><span id='8842359bi' class='paragraph'>
+						 見報恩人　當願衆生　念佛恩徳　行菩薩行&nbsp;</span><span id='8842360bi' class='paragraph'>
+						 見背恩人　當願衆生　降心伏意　棄捐諸惡&nbsp;</span><span id='8842361bi' class='paragraph'>
+						 見貪欲人　當願衆生　　法施天下　無慳貪意&nbsp;</span><span id='8842362bi' class='paragraph'>
+						 行持錫杖　當願衆生　依仗於法　分流徳化&nbsp;</span><span id='8842363bi' class='paragraph'>
+						 挾持應器　當願衆生　受而知施　修六重法&nbsp;</span><span id='8842364bi' class='paragraph'>
+						 入里分衞　當願衆生　　如戒法求　無得疑妄&nbsp;</span><span id='8842365bi' class='paragraph'>
+						 到人門戸　當願衆生　入總持門　悉見諸法&nbsp;</span><span id='8842366bi' class='paragraph'>
+						 入人堂室　當願衆生　昇佛聖堂　深行微妙&nbsp;</span><span id='8842367bi' class='paragraph'>
+						 人不與食　當願衆生　　得般若意　無望無惜&nbsp;</span><span id='8842368bi' class='paragraph'>
+						 主人未辦　當願衆生　離三惡道　無飢渇想&nbsp;</span><span id='8842369bi' class='paragraph'>
+						 授空應器　當願衆生　皆得至空　無欲之性&nbsp;</span><span id='8842370bi' class='paragraph'>
+						 受滿應器　當願衆生　　一切成滿　道品之法&nbsp;</span><span id='8842371bi' class='paragraph'>
+						 挾持鉢飯　當願衆生　爲法供養　志在大道&nbsp;</span><span id='8842372bi' class='paragraph'>
+						 與廉人坐　當願衆生　廉潔知恥　所作不妄&nbsp;</span><span id='8842373bi' class='paragraph'>
+						 坐有貪人　當願衆生　　無有強顏　貪鄙之心&nbsp;</span><span id='8842374bi' class='paragraph'>
+						 得香美食　當願衆生　知節少欲　情無所著&nbsp;</span><span id='8842375bi' class='paragraph'>
+						 得不美食　當願衆生　知身幻法　好惡無異&nbsp;</span><span id='8842376bi' class='paragraph'>
+						 擧飯向口　當願衆生　　悉得諸經　諸佛法味&nbsp;</span><span id='8842377bi' class='paragraph'>
+						 所噉雜味　當願衆生　味味如佛　化成甘露&nbsp;</span><span id='8842378bi' class='paragraph'>
+						 飯食已訖　當願衆生　徳行充盈　成十種力&nbsp;</span><span id='8842379bi' class='paragraph'>
+						 講經説法　當願衆生　　志意開達　聞法即寤<br/>呪願達嚫　當願衆生　　悉令通佛　十二部經&nbsp;</span><span id='8842380bi' class='paragraph'>
+						 罷坐退去　當願衆生　一切究竟　得三甘露&nbsp;</span><span id='8842381bi' class='paragraph'>
+						 若欲入水　當願衆生　　身口意淨　等於三塗&nbsp;</span><span id='8842382bi' class='paragraph'>
+						 澡浴身體　當願衆生　  蕩除心垢　見生死際&nbsp;</span><span id='8842383bi' class='paragraph'>
+						 盛暑熱極　當願衆生　得清涼定　滅一切苦&nbsp;</span><span id='8842384bi' class='paragraph'>
+						 氷凍寒甚　當願衆生 　心冷愛除　無復情欲&nbsp;</span><span id='8842385bi' class='paragraph'>
+						 誦讀經偈　當願衆生　博解諸法　無復漏忘&nbsp;</span><span id='8842386bi' class='paragraph'>
+						 若得見佛　當願衆生　常與佛會　行七覺意&nbsp;</span><span id='8842387bi' class='paragraph'>
+						 見佛圖像　當願衆生  　悉覩十方　眼無障蔽&nbsp;</span><span id='8842388bi' class='paragraph'>
+						 拜謁佛時　當願衆生　得道如佛　莫能見頂&nbsp;</span><span id='8842389bi' class='paragraph'>
+						 稽首而起　當願衆生　皆如佛意　尊貴無上&nbsp;</span><span id='8842390bi' class='paragraph'>
+						 始欲旋塔　當願衆生　　施行福祐　究暢道意&nbsp;</span><span id='8842391bi' class='paragraph'>
+						 遶塔三匝　當願衆生　得一向意　不斷四喜&nbsp;</span><span id='8842392bi' class='paragraph'>
+						 行詠歌經　當願衆生　念佛恩徳　行法供養<br/>畢住讃佛　當願衆生　光明神徳　如佛法身&nbsp;</span><span id='8842393bi' class='paragraph'>
+						 暮將洗足　當願衆生　得四神足　周遍十方&nbsp;</span><span id='8842394bi' class='paragraph'>
+						 See the previous record (two records ahead)&nbsp;</span><span id='8842395bi' class='paragraph'>
+						 昏夜寢息　當願衆生　離於闇冥　無復五蓋&nbsp;</span><span id='8842396bi' class='paragraph'>
+						 臥覺當願　都使衆生　得佛十八　不絶之法&nbsp;</span><span id='8842397bi' class='paragraph'>
+						 是爲菩薩　誡願倶行　兼愛博施　不捨十方&nbsp;</span><span id='8842398bi' class='paragraph'>
+						 十地品第三&nbsp;</span><span id='8842399bi' class='paragraph'>
+						 於是忍世界。百億天帝釋。皆於忉利紫紺殿上。化作七寶師子之座。施交露帳席以綵縶已。各稽首請佛。&nbsp;</span><span id='8842400bi' class='paragraph'>
+						 佛意悉知。即爲分身。遍諸釋殿。一一佛者。從衆菩薩。一切天帝。莫不悦豫。其下百億小國。續自見佛。如故不減。&nbsp;</span><span id='8842401bi' class='paragraph'>
+						 時十方刹。復來雲集。法意菩薩。首意菩薩。賢意菩薩。勤意菩薩。思意。知意審意。專意重意。盡意菩薩等。各從十方。與無數上人倶來。稽首佛足坐一面。蓮華上&nbsp;</span><span id='8842402bi' class='paragraph'>
+						 法意菩薩。即如其像。正坐定意。入於無量會見三昧。悉見十方。無數諸佛。&nbsp;</span><span id='8842403bi' class='paragraph'>
+						 各伸右手摩其頭。倶言&nbsp;</span><span id='8842404bi' class='paragraph'>
+						 善哉。法意。菩薩勇健。乃得是定。&nbsp;</span><span id='8842405bi' class='paragraph'>
+						 十方如來。及釋迦牟尼佛。已皆拜汝成立功徳。修微妙辯。知空無著行。究暢法要。通諸佛語。知衆生意。汝行已備。得佛不久。今使汝説菩薩十住。令諸學者普知所行。&nbsp;</span><span id='8842406bi' class='paragraph'>
+						 於是法意菩薩。得佛辯辭。明哲至眞。不忘不難。&nbsp;</span><span id='8842407bi' class='paragraph'>
+						 從定意覺而言曰。&nbsp;</span><span id='8842408bi' class='paragraph'>
+						 諸族姓子。欲求佛者。有十地住。往古來今。皆由此成。衆祐所歎。是合無量。具陳演説。如佛所言。&nbsp;</span><span id='8842409bi' class='paragraph'>
+						 何等爲十。&nbsp;</span><span id='8842410bi' class='paragraph'>
+						 第一發意。第二治地。第三應行。第四生貴。第五修成。第六行登。第七不退。第八童眞。第九了生。第十補處&nbsp;</span><span id='8842411bi' class='paragraph'>
+						 何謂發意。&nbsp;</span><span id='8842412bi' class='paragraph'>
+						 &nbsp;</span><span id='8842413bi' class='paragraph'>
+						 菩薩法住。有十事。謂初見佛。十功徳起。&nbsp;</span><span id='8842414bi' class='paragraph'>
+						 一見佛端正。二身色相具。三神足現化。四道徳深奧。五儀法無比。六謂知人意。七出經教明。八所言諦解。九見生死苦。十體樂佛法。&nbsp;</span><span id='8842415bi' class='paragraph'>
+						 稍稍開解。便發道意。欲曉了佛十力之智。&nbsp;</span><span id='8842416bi' class='paragraph'>
+						 其學有十。當知禮事諸佛。當曉説菩薩徳。當諦了生死本。當願修貴治福。當令行勝三界。當學諸佛功徳業。當求更見諸佛。當習行諸深三昧。當悲念諸罪苦人。當從生死輪還。是爲上頭初發意地&nbsp;</span><span id='8842417bi' class='paragraph'>
+						 何謂治地。菩薩法住。有十事。以次學。&nbsp;</span><span id='8842418bi' class='paragraph'>
+						 一念人善。二淨潔心。三柔軟意。四安靜志。五常布施。六行慈愛。七利天下。八助平均。九視彼如己。十敬人如師。&nbsp;</span><span id='8842419bi' class='paragraph'>
+						 復有十學。當多諷經。當遠郷土。當近明師。&nbsp;</span><span id='8842420bi' class='paragraph'>
+						 當學善言。當知時。當精進。當入要。當曉行。當不忘。當安志。是爲次第治地之行&nbsp;</span><span id='8842421bi' class='paragraph'>
+						 何謂應行。菩薩法住。有十事入如經。&nbsp;</span><span id='8842422bi' class='paragraph'>
+						 一見無常。二見生苦。三見行空。四見非身。五見無主。六無所貪。七無所著。八無爲。九無欲。十無求。&nbsp;</span><span id='8842423bi' class='paragraph'>
+						 復有十學。當念人。當念刹。當念法。當念地種。當念水種。當念火種。當念風種。當念欲界。當念色界。當念無色界。心無戀慕。是爲分別應行之地&nbsp;</span><span id='8842424bi' class='paragraph'>
+						 何謂生貴。菩薩法住。有十事隨佛行。&nbsp;</span><span id='8842425bi' class='paragraph'>
+						 一不還邪道。二專心向佛。三思惟法意。四觀功徳行。五見人如化。六見刹如夢。七見殃福空。八見諸法如幻。九苦樂無異。十解泥洹淨。&nbsp;</span><span id='8842426bi' class='paragraph'>
+						 復有學。當知思念。去佛意空。來佛意空。今佛意空。去佛法淨。來佛法淨。今佛法淨。&nbsp;</span><span id='8842427bi' class='paragraph'>
+						 去佛自然。來佛自然。今佛自然。諸佛興等。皆無所異。是爲平等生貴之地&nbsp;</span><span id='8842428bi' class='paragraph'>
+						 何謂修成。菩薩法住。有十事行濟人。&nbsp;</span><span id='8842429bi' class='paragraph'>
+						 一爲人方便。二令人安隱。三賑救天下人。四慈念一切。五悲傷衆生。六令人歡喜。七護視人物。八勸令隨道。九爲現清淨。十令得泥洹。&nbsp;</span><span id='8842430bi' class='paragraph'>
+						 復有十學。當知衆生。無有要。無有種。無有數。無有造。無有正。不可思。不可稱不可度。不可具説。爲一切空。是爲聖行修成之地。&nbsp;</span><span id='8842431bi' class='paragraph'>
+						 何謂行登。菩薩法住。有十事度輒成。&nbsp;</span><span id='8842432bi' class='paragraph'>
+						 一聞稱佛譏佛心無異。二聞譽法毀法心無異。三聞菩薩善菩薩惡心無異。四聞人相評論心無異。五聞人衆人寡心無異。六聞經多經少心無異。七聞生苦生樂心無異。八聞人難度人易度心無異。九聞法興法衰心無異。十遭有道遭無道心無異。&nbsp;</span><span id='8842433bi' class='paragraph'>
+						 復有十學。心無想不受想。不計身。無我所。無有見。無有主。無有受。爲如化。爲不成。無所有。是爲盡信行登之地&nbsp;</span><span id='8842434bi' class='paragraph'>
+						 何謂不退轉。菩薩法住。有十事志牢強。&nbsp;</span><span id='8842435bi' class='paragraph'>
+						 一言有佛無佛不退轉。二言有法無法不退轉。三言有菩薩無菩薩不退轉。四六言有求佛無求佛不退轉。五有得佛無得佛不退轉。六曰古有聖道無聖道不退轉。七今有聖道無聖道不退轉。八後有聖道無聖道不退轉。九言三塗同三塗異不退轉。十言佛智有盡佛智無盡不退轉。&nbsp;</span><span id='8842436bi' class='paragraph'>
+						 復有十學。開微慧入大智。開大智入微慧。現一法入衆經。現衆經入一法。解衆生入空要。解空要入衆生。釋有想入寂定。釋寂定入有想。説少淨入多想。説多想入少淨。是爲轉進不退之地&nbsp;</span><span id='8842437bi' class='paragraph'>
+						 何謂童眞。菩薩法住。有十事隨所入。&nbsp;</span><span id='8842438bi' class='paragraph'>
+						 一身口意不犯。二一切無瑕疵。三志壹在所生。四見人知内慈。五知人心所信。六知人意所解。七不受彼雜想。八知諸刹成敗。九神足疾遍到十方。十周滿持諸法。&nbsp;</span><span id='8842439bi' class='paragraph'>
+						 復有十事。學知佛世界。學如佛智能。學現佛神足行。學莊嚴諸佛刹。學遍遊諸國土。學法答衆問。學化無不現。學佛聲出諸法。學轉頃匝十方。學作一念見無數佛。是爲清淨童眞之地&nbsp;</span><span id='8842440bi' class='paragraph'>
+						 何謂了生。菩薩法住。有十事受慧見。&nbsp;</span><span id='8842441bi' class='paragraph'>
+						 一知一切生何道。二知衆生所習縛。三知人本所更來。四知人所行殃福之報。五知人受行何法。六知人心所入好惡。七知人意念若干變。八知十方國清濁。九知三塗無量慧。十知諦要説如應。&nbsp;</span><span id='8842442bi' class='paragraph'>
+						 復有十事。學法王正行。學法王禮儀。學法王興立。學法王出入。學法王周旋。學法王威嚴。學法王坐起。學法王教令。學法王拜人。學法王巡行刹土。是爲受決了生之地&nbsp;</span><span id='8842443bi' class='paragraph'>
+						 何謂補處。菩薩法住。有十事智難及。&nbsp;</span><span id='8842444bi' class='paragraph'>
+						 一當念感動無數國。二當爲無數國現明。三當爲無數國立法。四當爲開度無數國。五當利安無數國。六當聲曉無數人。七當觀察知衆生意。八當知衆生無極念。九當令無數人入法。十以次第現人慧&nbsp;</span><span id='8842445bi' class='paragraph'>
+						 了。生所不能及補處者十。不能知其身事志行。神足定念。達古知今。見後明處。及修刹法。聖意之事。補處所欲。&nbsp;</span><span id='8842446bi' class='paragraph'>
+						 又有十事。學佛三塗無際之慧。學具足諸佛法。學法法無所著。學諸佛無底藏。學神智成其刹。學光明照十方。學佛定感動諸國。學權道隨意化。學遍教令成就。學合會轉法輪。&nbsp;</span><span id='8842447bi' class='paragraph'>
+						 所以學者。欲一切知。已一切敏。無所復學。是名爲補處。從十十法成。現世得紹代無上正眞之道。爲最正覺。度脱天下。&nbsp;</span><span id='8842448bi' class='paragraph'>
+						 佛言。善哉善哉。法意菩薩。可謂佛子。一切十方去來現在佛。皆由此興。是法無際。所照無量。度人無極。智心無盡。&nbsp;</span><span id='8842449bi' class='paragraph'>
+						 佛説是已。皆大歡喜。爲佛作禮<br/> 佛説菩薩本業經&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='8842506'></div><div class='clear'></div><span id='8842506bi' class='paragraph'>
+							諸菩薩求佛本業經一卷西晋優婆塞聶道眞譯&nbsp;</span><span id='8842507bi' class='paragraph'>
+						 若那師利菩薩。問文殊師利菩薩。菩薩何因身有所行。不令他人得長短。口所言。不令他人得長短。心所念。不令他人得長短。何縁身不法他人長短。口不説他人長短。心不念他人長短。持是身所行口所言心所念。&nbsp;</span><span id='8842508bi' class='paragraph'>
+						 衆阿羅漢辟支佛。及諸天人世間人民。所不能及知。身所行口所言心所念。無能逮者。無有能動轉者。身所行口所言心所念。無有能害者。身所行口所言心所念。皆成就遂意。身所行事淨潔。口所言淨潔。心所念淨潔。身所行無瑕穢。口所言無瑕穢。心所念無瑕穢。身所行智慧在上頭。口所言智慧在上頭。心所念智慧在上頭。&nbsp;</span><span id='8842509bi' class='paragraph'>
+						 生時端正。生時智慧。生時布施。生時種類中好。生時於尊貴家。生時面色好。生時善相與衆異。&nbsp;</span><span id='8842510bi' class='paragraph'>
+						 意所念皆強。多所護持不忘。無所愛惜。高才猛健。猛中尊。猛中貴。 猛中勇。猛中勇猛。猛中無有比。所識爲無有能斟量者。所議無有央數。所議爲不可計。無有邊幅。無有能勝者。慈愛於佛經。皆前世筋力行所致。&nbsp;</span><span id='8842511bi' class='paragraph'>
+						 多所出入語者。人皆信用之。無有不敬附者。身所行。無有不淨潔者。諸所視經。無有不了知者。一心降意。思惟明曉。迴念入禪。&nbsp;</span><span id='8842512bi' class='paragraph'>
+						 出入五音中。入於四事中。入於三事中。入於十二事中過去當來今現在所出生福祐功徳中。入於七覺意中。入於虚空無常無所罣礙中。入於六波羅蜜經中。悉具足念善慈愛愍傷等。心悉無所憎愛。入於十種力慧中。爲諸天梵釋。阿須輪鬼神龍所供養。&nbsp;</span><span id='8842513bi' class='paragraph'>
+						 悉愛護十方人。諸有驚怖者。皆歸仰得解。諸有恐懼急縁者。無不得安隱者。明於十方。如燈火如炬火。如大火如日月。過度諸世間人。如船佐。如船中人。有尊師。於諸天世間人民蜎飛蠕動之類。極善極豪。都於大衆中。最獨尊雄中復重雄。極上無有與等者。如是法當何以致之。&nbsp;</span><span id='8842514bi' class='paragraph'>
+						 文殊師利菩薩。謂若那師利菩薩言。善哉善哉。佛子所問。乃爾極大慈愛。多所度脱。乃作是發意問。所問者皆有佛子菩薩身所行。有口所言。有心所念。&nbsp;</span><span id='8842515bi' class='paragraph'>
+						 有意所念道。諸所施行功徳悉可得。未曾増減。佛經時。過去當來今現在佛。悉受得之。皆從是起成。皆使世間人民悉安隱。諸所説經悉諦受。諸所有宿命惡悉消盡。諸經悉受得之。諸所有皆快。諸所有皆好。無有與等者。如是佛子。行於大道者。悉皆得之&nbsp;</span><span id='8842516bi' class='paragraph'>
+						 菩薩居家法。心念言。十方天下人。皆使莫爲愛欲所拘繋。悉入虚空法中。&nbsp;</span><span id='8842517bi' class='paragraph'>
+						 菩薩孝順供養父母時。心念言。十方天下人。皆使早得佛道。以當度脱十方天下人。&nbsp;</span><span id='8842518bi' class='paragraph'>
+						 菩薩妻子共居時。心念言。十方天下人。皆使諸有愛欲悉消去。&nbsp;</span><span id='8842519bi' class='paragraph'>
+						 菩薩居家。有所思時。心念言。十方天下人。皆使脱於愛欲中。得道極過度。&nbsp;</span><span id='8842520bi' class='paragraph'>
+						 菩薩居家相娯樂。作音樂時。心念言。十方天下人。皆使聽受諸經。悉得聞如是作音樂時欲聽聞。&nbsp;</span><span id='8842521bi' class='paragraph'>
+						 菩薩著七寶時。心念言。十方天下人。皆使脱於重擔去。悉得止休息。&nbsp;</span><span id='8842522bi' class='paragraph'>
+						 菩薩在婇女中相娯樂時。心念言。十方天下人。皆使悉入佛經中。拔棄於婬泆。&nbsp;</span><span id='8842523bi' class='paragraph'>
+						 菩薩在樓上時。心念言。十方天下人。皆使上佛經講堂上。悉受諸經無有與等者。&nbsp;</span><span id='8842524bi' class='paragraph'>
+						 See the record after next&nbsp;</span><span id='8842525bi' class='paragraph'>
+						 菩薩布施時。心念言。十方天下人。皆使諸所有。但欲施與人。無有貪愛者。&nbsp;</span><span id='8842526bi' class='paragraph'>
+						 菩薩與妻子恩愛時。心念言。十方天下人。皆使早脱去於婬泆惡露悉棄捐。令覺知入虚空中。&nbsp;</span><span id='8842527bi' class='paragraph'>
+						 菩薩患厭家中時。心念言。十方天下人。皆使早得脱解。無所復拘著。&nbsp;</span><span id='8842528bi' class='paragraph'>
+						 菩薩棄家行學道時。心念言。十方天下人。皆使得出去莫復還入愛欲中。無所復貪。&nbsp;</span><span id='8842529bi' class='paragraph'>
+						 若菩薩到佛寺時。心念言。十方天下人。皆使但念佛。悉入諸經中。無所復罣礙。&nbsp;</span><span id='8842530bi' class='paragraph'>
+						 菩薩至師和上所時。心念言。十方天下人。皆使心所念善。無有不得者。悉入正經中。&nbsp;</span><span id='8842531bi' class='paragraph'>
+						 菩薩索作沙門時。心念言。十方天下人。皆使所至到。悉令得成就。莫復中悔止。&nbsp;</span><span id='8842532bi' class='paragraph'>
+						 菩薩去白衣時。心念言。十方天下人。皆使極照明。於功徳中。莫令有懈怠。&nbsp;</span><span id='8842533bi' class='paragraph'>
+						 菩薩受袈裟時。心念言。十方天下人。皆使無所沾汚。持心如佛。&nbsp;</span><span id='8842534bi' class='paragraph'>
+						 菩薩剃頭髮時。心念言。十方天下人。皆使垢濁悉除去。莫復與共會。&nbsp;</span><span id='8842535bi' class='paragraph'>
+						 菩薩作大沙門時。心念言。十方天下人。皆使還漚和拘舍羅波羅蜜悉得經。&nbsp;</span><span id='8842536bi' class='paragraph'>
+						 菩薩作沙門時。心念言。十方天下人。皆使作沙門時。令如佛悉度十方天下人。&nbsp;</span><span id='8842537bi' class='paragraph'>
+						 菩薩持戒時。心念言。十方天下人。皆使護持禁戒。莫令犯如法。&nbsp;</span><span id='8842538bi' class='paragraph'>
+						 &nbsp;</span><span id='8842539bi' class='paragraph'>
+						 菩薩受和上時。心念言。十方天下人。皆使念所知禪。極過度。無所一罣礙。&nbsp;</span><span id='8842540bi' class='paragraph'>
+						 菩薩受師時。心念言。十方天下人。皆使所作。悉爲狎習。如所教法。持不失。&nbsp;</span><span id='8842541bi' class='paragraph'>
+						 菩薩自歸於佛時。心念言。十方天下人。皆使無不歡樂於佛法。悉生極好處。&nbsp;</span><span id='8842542bi' class='paragraph'>
+						 菩薩自歸於經時。心念言。十方天下人。皆使無不得深經藏。所得智慧如大海。&nbsp;</span><span id='8842543bi' class='paragraph'>
+						 菩薩自歸於僧時。心念言。十方天下人。皆使無不得依度如比丘僧。有所依度樂於佛道徳。&nbsp;</span><span id='8842544bi' class='paragraph'>
+						 菩薩開戸時。心念言。十方天下人。皆使早開天門。入佛經門。莫復厭還者。及自到佛泥洹道。&nbsp;</span><span id='8842545bi' class='paragraph'>
+						 菩薩入室中時。心念言。十方天下人。皆使得度脱。所居止處。早如佛所止處。早逮得深經。衆阿羅漢辟支佛所不能及。菩薩閉戸時。心念言。十方天下人。皆使早閉塞惡道門。諸所有宿命惡悉燒盡。&nbsp;</span><span id='8842546bi' class='paragraph'>
+						 菩薩敷床時。心念言。十方天下人。皆使早入至深經中。悉視十方人虚空。&nbsp;</span><span id='8842547bi' class='paragraph'>
+						 菩薩坐時。心念言。十方天下人。皆使坐安如佛坐於師子座上時。莫令心有所著。&nbsp;</span><span id='8842548bi' class='paragraph'>
+						 &nbsp;</span><span id='8842549bi' class='paragraph'>
+						 菩薩正坐時。心念言。十方天下人。皆使入正功徳中。無令有狐疑増減佛經中。&nbsp;</span><span id='8842550bi' class='paragraph'>
+						 菩薩喘息時。心念言。十方天下人。皆使喘息定成止足。&nbsp;</span><span id='8842551bi' class='paragraph'>
+						 &nbsp;</span><span id='8842552bi' class='paragraph'>
+						 菩薩佪念觀時。心念言。十方天下人。皆使當作是念。見無常法。&nbsp;</span><span id='8842553bi' class='paragraph'>
+						 菩薩起坐時。心念言。十方天下人。皆使所見虚空法。無有不了知者。&nbsp;</span><span id='8842554bi' class='paragraph'>
+						 菩薩足蹈地時。心念言。十方天下人。皆使住安隱。不復動搖。&nbsp;</span><span id='8842555bi' class='paragraph'>
+						 菩薩著泥洹僧時。心念言。十方天下人。皆使撿持功徳。悉愧於世間諸所有早令得佛道。&nbsp;</span><span id='8842556bi' class='paragraph'>
+						 菩薩繋帶時。心念言。十方天下人。皆使結諸功徳悉令堅。&nbsp;</span><span id='8842557bi' class='paragraph'>
+						 菩薩被安和時。心念言。十方天下人。皆使重益得諸功徳。悉入諸經中。極過度去。&nbsp;</span><span id='8842558bi' class='paragraph'>
+						 菩薩被震越時。心念言。十方天下人。皆使常樂喜於佛經。未曾有離時。&nbsp;</span><span id='8842559bi' class='paragraph'>
+						 See the next record (four records following)&nbsp;</span><span id='8842560bi' class='paragraph'>
+						 菩薩持楊枝時。心念言。十方天下人。皆使學諸經。悉淨潔得。&nbsp;</span><span id='8842561bi' class='paragraph'>
+						 See the next record (three records following)&nbsp;</span><span id='8842562bi' class='paragraph'>
+						 菩薩漱齒洗口時。心念言。十方天下人。皆使諸垢濁。悉淨潔去清淨住。&nbsp;</span><span id='8842563bi' class='paragraph'>
+						 菩薩左右時。心念言。十方天下人。皆使棄衆惡。斷絶婬泆瞋恚愚癡。&nbsp;</span><span id='8842564bi' class='paragraph'>
+						 菩薩行至水時。心念言。十方天下人。皆使上佛經。悉淨潔。菩薩持水行時。心念言。十方天下人。皆使無不謹勅軟好心淨潔。&nbsp;</span><span id='8842565bi' class='paragraph'>
+						 菩薩澡手時。心念言。十方天下人。皆使軟好手取諸經道法。&nbsp;</span><span id='8842566bi' class='paragraph'>
+						 菩薩洗面時。心念言。十方天下人。皆使入佛經道。面門莫令有瑕穢&nbsp;</span><span id='8842567bi' class='paragraph'>
+						 See the following record(47 records following)&nbsp;</span><span id='8842568bi' class='paragraph'>
+						 See the following record(47 records following)&nbsp;</span><span id='8842569bi' class='paragraph'>
+						 菩薩向出門時。心念言。十方天下人。皆使逮所求索。悉疾得無所復罣礙。&nbsp;</span><span id='8842570bi' class='paragraph'>
+						 菩薩向道時。心念言。十方天下人。皆使早得佛。莫復令還。&nbsp;</span><span id='8842571bi' class='paragraph'>
+						 菩薩行道時。心念言。十方天下人。皆使入無底經中。悉深入經。淨潔身體。無所罣礙。&nbsp;</span><span id='8842572bi' class='paragraph'>
+						 菩薩行道上坂時。心念言。十方天下人。皆使喜樂佛經。無有厭極時。&nbsp;</span><span id='8842573bi' class='paragraph'>
+						 菩薩行道下坂時。心念言。十方天下人。皆使入佛大道中。悉貫諸智慧。&nbsp;</span><span id='8842574bi' class='paragraph'>
+						 菩薩行曲道中時。心念言。十方天下人。皆使莫有邪念。無令有惡口。&nbsp;</span><span id='8842575bi' class='paragraph'>
+						 菩薩行直道中時。心念言。十方天下人。皆使心念正道。無令有諛諂。&nbsp;</span><span id='8842576bi' class='paragraph'>
+						 菩薩見揚塵滿道時。心念言。十方天下人。皆使諸欲去。常得明經。&nbsp;</span><span id='8842577bi' class='paragraph'>
+						 菩薩見淹塵滿道時。心念言。十方天下人。皆使常柔軟心。悉得諸慈哀。&nbsp;</span><span id='8842578bi' class='paragraph'>
+						 菩薩見陰涼樹時。心念言。十方天下人。皆使諸所惡法。悉除去通利。入佛經中悉覺知。&nbsp;</span><span id='8842579bi' class='paragraph'>
+						 菩薩見講堂精舍時。心念言。十方天下人。皆使聽受諸經悉入中。&nbsp;</span><span id='8842580bi' class='paragraph'>
+						 菩薩見林大樹時。心念言。十方天下人。皆使無不歸仰。供養者天上世間皆悉然。&nbsp;</span><span id='8842581bi' class='paragraph'>
+						 菩薩見山時。心念言。十方天下人。皆使心念高才。明諸功徳法。無有能勝者。&nbsp;</span><span id='8842582bi' class='paragraph'>
+						 菩薩見棘樹時。心念言。十方天下人。皆使疾遠離於婬泆瞋怒愚癡。&nbsp;</span><span id='8842583bi' class='paragraph'>
+						 菩薩見葉樹時。心念言。十方天下人。皆使道覆蓋得禪。迴入三昧。&nbsp;</span><span id='8842584bi' class='paragraph'>
+						 菩薩見華樹時。心念言。十方天下人。皆使莊身得三十二相。&nbsp;</span><span id='8842585bi' class='paragraph'>
+						 菩薩見實樹時。心念言。十方天下人。皆使得華實。悉具足於佛經中。&nbsp;</span><span id='8842586bi' class='paragraph'>
+						 菩薩見流水時。心念言。十方天下人。皆使入佛經流淵中。悉得佛智。(also, see thefollowing record)&nbsp;</span><span id='8842587bi' class='paragraph'>
+						 See the previous record and following record&nbsp;</span><span id='8842588bi' class='paragraph'>
+						 菩薩見井時。心念言。十方天下人。皆使早開經門。一味無有異。菩薩見汲水時。心念言。十方天下人。皆使所道智悉具足。開入功徳法中。&nbsp;</span><span id='8842589bi' class='paragraph'>
+						 菩薩見泉水時。心念言。十方天下人。皆使所問慧者。多所解。悉會於佛經道中。&nbsp;</span><span id='8842590bi' class='paragraph'>
+						 菩薩見大水時。心念言。十方天下人。皆使悉重持諸功徳法。無有盡。時無有能過者。&nbsp;</span><span id='8842591bi' class='paragraph'>
+						 See the previous record (three records ahead)&nbsp;</span><span id='8842592bi' class='paragraph'>
+						 菩薩見橋梁時。心念言。十方天下人。皆使得諸經。極過度人。如橋梁過人。無有極止時。&nbsp;</span><span id='8842593bi' class='paragraph'>
+						 &nbsp;</span><span id='8842594bi' class='paragraph'>
+						 &nbsp;</span><span id='8842595bi' class='paragraph'>
+						 &nbsp;</span><span id='8842596bi' class='paragraph'>
+						 菩薩見宅舍時心念言。十方天下人。皆使遠離於愛欲。十方人心所念者皆悉知。&nbsp;</span><span id='8842597bi' class='paragraph'>
+						 菩薩見園時。心念言。十方天下人。皆使心無所拘著。不樂於五音樂五所思。&nbsp;</span><span id='8842598bi' class='paragraph'>
+						 菩薩見果園時。心念言。十方天下人。皆使心無所愁憂。悉得深智本根。&nbsp;</span><span id='8842599bi' class='paragraph'>
+						 菩薩見戲園時。心念言。十方天下人。皆使無不精進者。莫令離於佛諸經。&nbsp;</span><span id='8842600bi' class='paragraph'>
+						 菩薩見莊嚴大衆出時。心念言。十方天下人。皆使莊嚴於三十二相悉逮得。&nbsp;</span><span id='8842601bi' class='paragraph'>
+						 &nbsp;</span><span id='8842602bi' class='paragraph'>
+						 菩薩見人愁憂時。心念言。十方天下人。皆使莫復愁憂。&nbsp;</span><span id='8842603bi' class='paragraph'>
+						 菩薩見人樂時。心念言。十方天下人。皆使樂喜深經。&nbsp;</span><span id='8842604bi' class='paragraph'>
+						 菩薩見人不樂時。 心念言。十方天下人。皆使恩愛。無所著。&nbsp;</span><span id='8842605bi' class='paragraph'>
+						 菩薩見人安隱時。心念言。十方天下人。皆使安隱。逮得如佛安隱。&nbsp;</span><span id='8842606bi' class='paragraph'>
+						 菩薩見人勤苦時。心念言。十方天下人。皆使滅諸勤苦。悉見正眞道。&nbsp;</span><span id='8842607bi' class='paragraph'>
+						 菩薩見人強健時。心念言。十方天下人。皆使強健如佛。時身強健。&nbsp;</span><span id='8842608bi' class='paragraph'>
+						 菩薩見人病時。心念言。十方天下人。皆使念無常。悉入虚空中。盡究竟於佛經。莫復還。&nbsp;</span><span id='8842609bi' class='paragraph'>
+						 菩薩見端正人時。心念言。十方天下人。皆使愛樂於佛經。&nbsp;</span><span id='8842610bi' class='paragraph'>
+						 菩薩見醜人時。心念言。十方天下人。皆使莫墮醜惡中。&nbsp;</span><span id='8842611bi' class='paragraph'>
+						 菩薩見報恩時。心念言。十方天下人。皆使報恩於諸菩薩。&nbsp;</span><span id='8842612bi' class='paragraph'>
+						 菩薩見不報恩人時。心念言。十方天下人。皆使無有慳貪。悉示人於正道。&nbsp;</span><span id='8842613bi' class='paragraph'>
+						 菩薩見沙門時。心念言。十方天下人。皆使受諸經。悉究竟得。&nbsp;</span><span id='8842614bi' class='paragraph'>
+						 菩薩見異道人時。心念言。十方天下人。皆使諸惡根本。悉消盡賜。究竟諸經。&nbsp;</span><span id='8842615bi' class='paragraph'>
+						 菩薩見仙人時。心念言。十方天下人。皆使所求願。盡悉得。所作爲皆成足。&nbsp;</span><span id='8842616bi' class='paragraph'>
+						 See the next record(eight records following)&nbsp;</span><span id='8842617bi' class='paragraph'>
+						 菩薩見被鎧人時。心念言。十方天下人。皆使受鎧悉具足於佛經。<br/>菩薩見愚鈍時。心念言。十方天下人。皆使黠健。所作爲。莫墮衆惡中。&nbsp;</span><span id='8842618bi' class='paragraph'>
+						 菩薩見講經時。心念言。十方天下人。皆使所聞知。無不解慧者。&nbsp;</span><span id='8842619bi' class='paragraph'>
+						 菩薩見帝王時。心念言。十方天下人。皆使自致爲經中王。自然轉經。説道無有休絶時。&nbsp;</span><span id='8842620bi' class='paragraph'>
+						 菩薩見太子時。心念言。十方天下人。皆使作佛子。常化生於經中。&nbsp;</span><span id='8842621bi' class='paragraph'>
+						 菩薩見公卿時。心念言。十方天下人。皆使明於深經中所問慧。莫不解遣承用者。&nbsp;</span><span id='8842622bi' class='paragraph'>
+						 菩薩見旁臣長吏時。心念言。十方天下人。皆使念正莫用有惡。無令遠離於諸菩薩。&nbsp;</span><span id='8842623bi' class='paragraph'>
+						 See the previous record(six records ahead)&nbsp;</span><span id='8842624bi' class='paragraph'>
+						 菩薩見城時。心念言。十方天下人。皆使身體。無有與等者。悉令人善無有能過者。<br/>菩薩見宮闕時。心念言。十方天下人。皆使樂明於心。常念與善功徳相値。&nbsp;</span><span id='8842625bi' class='paragraph'>
+						 See the previous record (23 records ahead)&nbsp;</span><span id='8842626bi' class='paragraph'>
+						 See the previous record (23 records ahead)&nbsp;</span><span id='8842627bi' class='paragraph'>
+						 See the previous record (21 records ahead)&nbsp;</span><span id='8842628bi' class='paragraph'>
+						 See the previous record (23 records ahead)&nbsp;</span><span id='8842629bi' class='paragraph'>
+						 See the previous record (21 records ahead)&nbsp;</span><span id='8842630bi' class='paragraph'>
+						 See the previous record (23 records ahead)&nbsp;</span><span id='8842631bi' class='paragraph'>
+						 See the previous record (21 records ahead)&nbsp;</span><span id='8842632bi' class='paragraph'>
+						 See the previous record (23 records ahead)&nbsp;</span><span id='8842633bi' class='paragraph'>
+						 See the previous record (22 records ahead)&nbsp;</span><span id='8842634bi' class='paragraph'>
+						 See the previous record (22 records ahead)&nbsp;</span><span id='8842635bi' class='paragraph'>
+						 &nbsp;</span><span id='8842636bi' class='paragraph'>
+						 菩薩見持錫杖時。心念言。十方天下人。皆使常作善。爲人所仰。常欲施與人。教人爲善法。&nbsp;</span><span id='8842637bi' class='paragraph'>
+						 菩薩持鉢時。心念言。十方天下人。皆使多所饋遺。悉受所供養。皆入於無底功徳中。&nbsp;</span><span id='8842638bi' class='paragraph'>
+						 菩薩行分越時。心念言。十方天下人。皆使入佛法處。無有忘誤時。&nbsp;</span><span id='8842639bi' class='paragraph'>
+						 菩薩至人家門時。心念言。十方天下人。皆使至佛經門。&nbsp;</span><span id='8842640bi' class='paragraph'>
+						 菩薩入門内時。心念言。十方天下人。皆使入佛智慧内。&nbsp;</span><span id='8842641bi' class='paragraph'>
+						 菩薩未受飯食時。心念言。十方天下人。皆使無有逆難。悉入般若波羅蜜經中。&nbsp;</span><span id='8842642bi' class='paragraph'>
+						 菩薩未得飯時。心念言。十方天下人。皆使莫復墮泥犁。禽獸。薜荔。監樓。惡道中。&nbsp;</span><span id='8842643bi' class='paragraph'>
+						 菩薩見空鉢時。心念言。十方天下人。皆使空於愛欲中。&nbsp;</span><span id='8842644bi' class='paragraph'>
+						 菩薩見滿鉢時。心念言。十方天下人。皆使滿諸功徳中。&nbsp;</span><span id='8842645bi' class='paragraph'>
+						 菩薩見受飯鉢時。心念言。十方天下人。皆使奉行佛道事。&nbsp;</span><span id='8842646bi' class='paragraph'>
+						 菩薩見慚愧人時。心念言。十方天下人。皆使無不慚愧於愛欲者。&nbsp;</span><span id='8842647bi' class='paragraph'>
+						 菩薩見不慚愧人時。心念言。十方天下人。皆使心所念惡悉棄捐。莫不慈哀者。&nbsp;</span><span id='8842648bi' class='paragraph'>
+						 菩薩得美食時。心念言。十方天下人。皆使所願。無不悉得者。心無沾汚。&nbsp;</span><span id='8842649bi' class='paragraph'>
+						 菩薩得麁飯食時。心念言。十方天下人。皆使柔軟心。無不愍傷者。&nbsp;</span><span id='8842650bi' class='paragraph'>
+						 菩薩飯時。心念言。十方天下人。皆使如禪食足。常飽於經。&nbsp;</span><span id='8842651bi' class='paragraph'>
+						 菩薩食味時。心念言。十方天下人。皆使飽味。如佛喉咽所化味時。悉令逮得於甘露名經。&nbsp;</span><span id='8842652bi' class='paragraph'>
+						 菩薩飽已時。心念言。十方天下人。皆使所作。爲悉成足。入佛經極過去。&nbsp;</span><span id='8842653bi' class='paragraph'>
+						 菩薩説經呪願時。心念言。十方天下人。皆説所道。無有盡時。悉入佛諸深經中。&nbsp;</span><span id='8842654bi' class='paragraph'>
+						 菩薩説經呪願已出去時。心念言。十方天下人。皆使出於三處色。無常空中。悉受得佛智慧。&nbsp;</span><span id='8842655bi' class='paragraph'>
+						 菩薩入水時。心念言。十方天下人。皆使入佛智慧中。過去當來今現在悉平等。&nbsp;</span><span id='8842656bi' class='paragraph'>
+						 菩薩浴時。心念言。十方天下人。皆使洗除心垢。悉令去明極照至邊。&nbsp;</span><span id='8842657bi' class='paragraph'>
+						 菩薩見熱時。心念言。十方天下人。皆使遠離於熱極過度去。&nbsp;</span><span id='8842658bi' class='paragraph'>
+						 菩薩見寒時。心念言。十方天下人。皆使作人中將。得極明涼好處。&nbsp;</span><span id='8842659bi' class='paragraph'>
+						 菩薩見誦經時。心念言。十方天下人。皆使解於諸經處。盡求索智。悉攬持諸慧。&nbsp;</span><span id='8842660bi' class='paragraph'>
+						 菩薩見佛時。心念言。十方天下人。皆使與諸佛共會。心無所罣礙。&nbsp;</span><span id='8842661bi' class='paragraph'>
+						 菩薩上向視佛時。心念言。十方天下人。皆使眼所視。無所罣礙。見無極處。&nbsp;</span><span id='8842662bi' class='paragraph'>
+						 菩薩爲佛禮拜。頭腦著地時。心念言。十方天下人。皆使無有能逮見佛頭上者。天上天下。&nbsp;</span><span id='8842663bi' class='paragraph'>
+						 菩薩拜起。正視佛時。心念言。十方天下人。皆使行經無有與等者。&nbsp;</span><span id='8842664bi' class='paragraph'>
+						 菩薩繞佛一匝時。心念言。十方天下人。皆使繞極善所作。爲皆究竟賜經明。&nbsp;</span><span id='8842665bi' class='paragraph'>
+						 菩薩繞佛三匝時。心念言。十方天下人。皆使所作爲。心常勇。未常遠離於佛道。&nbsp;</span><span id='8842666bi' class='paragraph'>
+						 菩薩稱譽佛功徳威神時。心念言。十方天下人。皆使所作爲。功徳不可計。威神不可計。功中極過度。See the also next records(two records following)&nbsp;</span><span id='8842667bi' class='paragraph'>
+						 菩薩洗足時。心念言。十方天下人。皆使悉得佛神足念飛。無所復罣礙。悉入具。&nbsp;</span><span id='8842668bi' class='paragraph'>
+						 菩薩稱譽佛相時。心念言。十方天下人。皆使身體。悉具足。如佛經身。&nbsp;</span><span id='8842669bi' class='paragraph'>
+						 菩薩臥坐時。心念言。十方天下人。皆使得佛智慧。得十力。&nbsp;</span><span id='8842670bi' class='paragraph'>
+						 &nbsp;</span><span id='8842671bi' class='paragraph'>
+						 是爲菩薩常所行道&nbsp;</span><span id='8842672bi' class='paragraph'>
+						  (or see the next record, four records following)&nbsp;</span><span id='8842673bi' class='paragraph'>
+						 是釋迦文佛刹。凡有百億釋提桓因坻。皆忉利天上。悉各思想欲請佛。諸釋提桓因坻皆爲佛於紫紺正殿上。施七寶師子座。以天所有名好劫波育雜色。若干種絶殊好。皆敷著座上。皆施絶好交露帳。皆各於適已。&nbsp;</span><span id='8842674bi' class='paragraph'>
+						 佛即悉知之。佛便分身威神。悉皆在百億忉利天上釋提桓因抵外門。一一釋提桓因坻。皆有一佛。凡有百億佛。皆與諸菩薩等倶。諸釋提桓因坻。皆大歡喜。悉出迎。爲佛作禮。請佛入。佛即與諸菩薩等倶入。至紫紺正殿上帳中坐。諸菩薩等。悉各於一一七寶蓮華師子座交露帳中坐。佛續在是百億小國土。與諸菩薩共坐。威神不動&nbsp;</span><span id='8842675bi' class='paragraph'>
+						 十方諸菩薩大復來會曇昧摩提菩薩。復有曇昧摩提菩薩。師利摩提菩薩。倶那摩提菩薩。墮夜摩提菩薩。沙頭摩提菩薩。若那摩提菩薩。沙遮摩提菩薩。阿迦摩提菩薩。沙羅摩提菩薩。薩和摩提菩薩<br/><br/>諸菩薩求佛本業經&nbsp;</span><span id='8842676bi' class='paragraph'>
+						 菩薩十住行道品一卷<br/>西晋三藏竺法護譯<br/><br/>曇昧摩提菩薩。持佛威神。便於佛前。於是阿難波渝迦三昧。悉見十方諸佛。十方諸佛者。其數如千佛刹塵等。一塵者。爲一佛刹。一佛刹如是十方四面。&nbsp;</span><span id='8842677bi' class='paragraph'>
+						 見十方諸佛。皆悉言。&nbsp;</span><span id='8842678bi' class='paragraph'>
+						 善哉善哉。曇昧摩提菩薩。&nbsp;</span><span id='8842679bi' class='paragraph'>
+						 十方諸佛。皆賜與智慧。悉語曇昧摩提菩薩言。是釋迦文佛。前世本願。所結成功徳。威神使若益。諸經益者。佛威神益。深入經處。悉示諸十方。虚空法心無所著。悉入無所罣礙中。悉入大道中。疾近逮佛。悉知諸經。諸十方人所思想。悉學知十方諸所説經。皆悉知用。是故悉爲諸菩薩等。説菩薩十法住。悉及得持佛威神。悉能説。&nbsp;</span><span id='8842680bi' class='paragraph'>
+						 爾時曇昧摩提菩薩。所語説。無所罣礙。無所難也。無有盡賜時。無有能升量者。無有極止時。無有能逮者。無有能得長短者。未曾有忘時。無不得明者。悉等無異。無有懈慢時。衆所不能及。&nbsp;</span><span id='8842681bi' class='paragraph'>
+						 持是三昧力。十方諸佛等。皆各各伸右手。著曇昧摩提菩薩頭上。以曇昧摩提菩薩。使於三昧中覺。便語菩薩言。&nbsp;</span><span id='8842682bi' class='paragraph'>
+						 諸佛子皆聽。菩薩舍甚大。悉如虚空。經處何因。菩薩舍甚大。過去諸佛悉那中生。當來諸佛悉那中生。今現在諸佛悉那中生。何因菩薩入大道中。從何因縁。入是大道中。何因正爾。菩薩有十法住。用分別如過去當來今現在佛等所説。&nbsp;</span><span id='8842683bi' class='paragraph'>
+						 何等爲諸菩薩十法住&nbsp;</span><span id='8842684bi' class='paragraph'>
+						 第一者。波藍耆兜波菩薩法住<br/> 第二者。名阿闍浮菩薩法住<br/> 第三者。名渝阿闍菩薩法住<br/> 第四者。名闍摩期菩薩法住<br/> 第五者。名波渝三般菩薩法住<br/> 第六者。名阿耆三般菩薩法住<br/> 第七者。名阿惟越致菩薩法住<br/> 第八者。名鳩摩羅浮童男菩薩法住<br/> 第九者。名渝羅闍菩薩法住<br/> 第十者。名阿惟顏菩薩法住<br/>&nbsp;</span><span id='8842685bi' class='paragraph'>
+						 一何等爲波藍耆兜波菩薩法住者。&nbsp;</span><span id='8842686bi' class='paragraph'>
+						 上頭見佛。端政無比。視面色無有厭。時無有及逮者。尊貴無有能過者。飛無有能過者。所教授無有能過者。是菩薩。見佛威神儀法如是。使稍入佛道中。轉開導之。皆隨其意教度。既見勤苦者皆愍傷。稍稍近曉佛語。信向之。新發起意。學佛道。悉欲得了佛智十難處。悉欲逮得知之。何等爲十難處十種力。&nbsp;</span><span id='8842687bi' class='paragraph'>
+						 波藍耆兜波菩薩教。有十事。何等爲十事。&nbsp;</span><span id='8842688bi' class='paragraph'>
+						 一者當供養佛諸菩薩。二者隨其所樂當教語。三者所生處皆尊貴。四者天上天下。一無有能及者。五者佛所有智悉當逮得。六者波羅世所生處。常見無央數佛。七者所有深三昧經悉當逮得。八者死生道無邊幅處以來。九者命既去不久。十者若悉當度脱十方人。&nbsp;</span><span id='8842689bi' class='paragraph'>
+						 所以者何。益入於佛法中故&nbsp;</span><span id='8842690bi' class='paragraph'>
+						 &nbsp;</span><span id='8842691bi' class='paragraph'>
+						 二何等爲阿闍浮菩薩法住者。有十意。念十方人。何等爲十意。&nbsp;</span><span id='8842692bi' class='paragraph'>
+						 一者悉念世間人善。二者淨潔心。三者皆安隱心。四者柔軟心。五者悉愛等。六者心念但欲施與人。七者心悉當護。八者心念人與我身無異。九者心念十方人我觀如師。十者心念十方人視如佛。&nbsp;</span><span id='8842693bi' class='paragraph'>
+						 阿闍浮菩薩法。當多學經。既多學經。以當獨處止。既獨處止。當與善師從事。既與善師從事。當在善師邊。&nbsp;</span><span id='8842694bi' class='paragraph'>
+						 既在善師邊。當易使。既易使。當隨時。既隨所作爲。當勇所作爲。既勇。當學入慧中。既學入慧中。以所受法。當悉持。既當悉持法。當不忘。既不忘。當安隱處止。所以者何。益於閔傷十方人故。&nbsp;</span><span id='8842695bi' class='paragraph'>
+						 三何等爲渝阿闍菩薩法住者。入於諸法中。用十事。何等爲十事。&nbsp;</span><span id='8842696bi' class='paragraph'>
+						 一者諸所有皆無常。二者諸所有皆勤苦。三者諸所有皆虚空。四者諸所有皆非我所。五者諸所有皆無所住。六者諸所有皆無利。七者諸所有皆無所止。八者諸所有皆無有處。九者諸所有皆無所著。十者諸所有皆無所有。諸法悉入中不復還。&nbsp;</span><span id='8842697bi' class='paragraph'>
+						 渝阿闍菩薩教法。悉當念於十方人。念於十方人已。悉當念法處。念法處已。悉當念諸佛刹。念諸佛刹已。悉當念地法。念地法已。悉當念水法。念水法已。悉當念火法。念火法已。悉當念風法。念風法已。悉當念欲法。念欲法已。悉當念色法。念色法已。當念無有欲色法處。念無所欲色法處已。心無所貪。所以者何。用是故。悉當法明&nbsp;</span><span id='8842698bi' class='paragraph'>
+						 四何等爲闍摩期菩薩法住者。常念於佛處生。有十事。何事爲十事。&nbsp;</span><span id='8842699bi' class='paragraph'>
+						 一者不復還。二者多深慈於佛。三者深思惟法。四者皆視十方人慈心。五者思惟十方了無所有。六者十方佛刹皆虚空。七者宿命所作了無所有。八者諸所有皆虚空。譬如作幻耳。九者諸所有勤苦無所有。十者泥洹虚空無所有。用是故。生於佛法中。&nbsp;</span><span id='8842700bi' class='paragraph'>
+						 是爲闍摩期菩薩教法。過去諸佛虚空無所有。當來諸佛虚空無所有。今現在諸佛虚空無所有。過去諸佛法無所有。當來諸佛法無所有。今現在諸佛法無所有&nbsp;</span><span id='8842701bi' class='paragraph'>
+						 過去諸佛法。念從何所出生索了無所有。當來諸佛法。念從何所出生索了無所有。今現在諸佛法。念從何所生索了無所有。諸佛法等悉了無所有。所以者何。是三世法。等皆了無所有一&nbsp;</span><span id='8842702bi' class='paragraph'>
+						 五何等爲波渝三般菩薩法住者。所作功徳。悉度十方人。有十事。何等爲十事。&nbsp;</span><span id='8842703bi' class='paragraph'>
+						 一者悉護十方人。二者悉令十方人善。三者悉念十方人命安隱。四者悉愛十方人。五者悉哀十方人。六者悉教十方人莫使作惡。七者悉引十方人著菩薩道中。八者悉清淨於十方人。九者悉度十方人。十者悉脱十方人令般泥洹。&nbsp;</span><span id='8842704bi' class='paragraph'>
+						 不可復計十方人。不可復數十方人。不可復議十方人。不可復稱十方人。不可復量十方人。了不可議説十方人。何等爲十方人者。都盧十方人。皆虚空人。皆非我所人。皆無所有人。皆所有皆無他奇。所以者何。心無所著故&nbsp;</span><span id='8842705bi' class='paragraph'>
+						 六何等爲阿耆三般菩薩法住者。有十法深慈心哀。何等爲十法。&nbsp;</span><span id='8842706bi' class='paragraph'>
+						 一者用説佛善惡心無有異。二者説法善説法惡心無有異。三者説菩薩善説菩薩惡心無有異。四者求菩薩道人共相道善惡心無有異。五者中有人言十方人多十方人少心無有異。六者都十方人轉相道善惡心無有異。七者中有人説言十方人易脱難脱心無有異。八者説法多説法少心無有異。九者説法壞説法不壞心無有異。十者有法處無法處心無有異。是菩薩當學。是諸法無有處。&nbsp;</span><span id='8842707bi' class='paragraph'>
+						 復有十事。何等爲十事。一者諸法無有處。二者諸法不可得見處。三者學諸法譬如化作。四者諸法皆虚空。五者諸法若干種虚空。六者諸法無有罣礙極虚空處。七者諸法譬若幻所化。八者諸法譬夢中所有。九者諸法不可計。十者諸法無所有不可得視。所以者何。益深入佛法中。無有能勝者&nbsp;</span><span id='8842708bi' class='paragraph'>
+						 七阿惟越致菩薩者。何等法住。菩薩聞十事堅住。何等爲十事。&nbsp;</span><span id='8842709bi' class='paragraph'>
+						 一者有佛無佛不動還。二者言有法無法不動還。三者有菩薩無菩薩不動還。四者有求菩薩道者無有求菩薩道者不動還。五者持是法得持是法不得不動還。六者有諸過去佛無諸過去佛不動還。七者有諸當來佛無諸當來佛不動還。八者有諸現在佛無諸現在佛不動還。九者佛智慧盡佛智慧不盡不動還。十者過去世事。當來世事今現在世事。乎若干種乎一種心終不復動還。&nbsp;</span><span id='8842710bi' class='paragraph'>
+						 是菩薩當教令學此十事。何等爲十。一者向一慧。入若干慧。二者持若干慧。入一慧。三者一慧入若干事。四者從若干事。入一慧。五者持十方人。處虚空。六者持虚空。皆入十方人。七者持思想。入不動搖。八者持不動搖。入思想中。九者持虚空入想中。十者持想。入虚空中。所以者何。諸功徳法悉入中。用是故不復動&nbsp;</span><span id='8842711bi' class='paragraph'>
+						 八鳩摩羅浮童男菩薩者。爲何等法住。菩薩於十事中住。何等十。&nbsp;</span><span id='8842712bi' class='paragraph'>
+						 一者身所行。口所言。心所念。悉淨潔。二者無有能得長短者。三者心一反念在欲生何所。四者十方人知誰慈心者。五者十方人所信用悉知。六者十方人若干種悉知。七者十方人所作爲悉知。八者諸刹土成敗悉知。九者神足念飛在所到。十者諸法清淨學。&nbsp;</span><span id='8842713bi' class='paragraph'>
+						 是菩薩。當復學十事。何等爲十事。一者當學知諸佛刹佛刹。二者當學感動諸佛刹。三者當學自在所作威神。四者當學視諸佛刹。五者當學從一佛刹復至一佛刹。六者當學往到無央數佛刹。七者當學知無央數法在所問。八者當學變化。譬如幻自在所作。九者當學佛音聲響。十者當學一反念。供養無央佛所。即悉遍至到。所以者何。入於一法中多所遣&nbsp;</span><span id='8842714bi' class='paragraph'>
+						 九者渝阿羅闍菩薩者。何等法住。菩薩用十事得。何等爲十事。&nbsp;</span><span id='8842715bi' class='paragraph'>
+						 一者諸十方人。所出生悉知。二者十方人。所繋恩愛悉知。三者十方人。所念本末所從來悉知。四者十方人。所作爲宿命善惡所趣向悉知。五者若干種諸法悉知。六者十方人所念。若干種變化悉知。七者諸佛刹壞敗善惡悉知。八者過去當來今現在。無央數世事悉知。九者十方人。等不等悉知。十者教授十方人。説虚空法悉知是。&nbsp;</span><span id='8842716bi' class='paragraph'>
+						 菩薩復有十處當學知。何等爲十處。一者佛法宮當學。二者造佛法宮當學。三者佛宮中所有當學。四者佛宮中所教勅當學。五者佛所出入宮當學。六者法宮當學。七者法王宮當學。八者法所教勅當學。九者安行法王當學。十者更造作法中王所教勅。當承用學。所以者何。心稍稍入佛大道中。所聞法自用教&nbsp;</span><span id='8842717bi' class='paragraph'>
+						 十阿惟顏菩薩者。爲何法住。菩薩入於若干十智中。悉分別知。何等爲十智中。&nbsp;</span><span id='8842718bi' class='paragraph'>
+						 一者當何因感動無央數佛刹。二者當明無央數佛刹中事。三者我日日當置無央數佛刹中菩薩。四者我日日當度無央數佛刹中人。五者我當安隱無央數佛刹中衆。生六者十方人無央數。皆聞我聲。七者悉知十方人民。八者十方人所思想善惡。我悉當知。九者十方人。我悉當内佛道中。十者十方人。我悉當度脱。&nbsp;</span><span id='8842719bi' class='paragraph'>
+						 渝羅闍菩薩。不能及知阿惟顏身所行口所言心所念所作爲。了不能及知阿惟顏菩薩事。不能及知神足念。不能知飛。亦不能逮知阿惟顏菩薩過去當來今現在事。亦不能還知所念佛刹。亦不能逮知心所念所行。爲智慧用十事。渝羅闍菩薩。不能逮知阿惟顏菩薩所行事。&nbsp;</span><span id='8842720bi' class='paragraph'>
+						 是阿惟顏菩薩。逮入佛十智中。何等爲十智中。一者過去當來今現在。無端亟從佛學。二者諸佛法悉具足。從佛學。三者諸法處無所罣礙。從佛學。四者諸法處。無邊幅無崖底。從佛學。五者諸所有刹土。我悉當護持是功徳威神。從佛學。六者不可復計刹土處無邊幅。悉當明知。從佛學。七者十方無央數佛刹。悉當安隱。從佛學。八者十方人所行。爲悉當從佛學。九者諸法智慧悉入中。從佛學。十者佛所有智慧。悉當知。從佛學。&nbsp;</span><span id='8842721bi' class='paragraph'>
+						 所以者何。悉具足知。皆曉了佛智慧。都無所復從誰學道。是爲阿惟顏。以十法菩薩行道如是<br/> 菩薩十住行道經&nbsp;</span><span id='8842722bi' class='paragraph'>
+						 &nbsp;</span><span id='8842723bi' class='paragraph'>
+						 &nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='8843054'></div><div class='clear'></div><span id='8843054bi' class='paragraph'>
+							&nbsp;</span><span id='8843055bi' class='paragraph'>
+						 de nas byaṅ chub sems dpa’ ye śes dpal gyis byaṅ chub sems dpa’ ’jam dpal la ’di skad ces smras so || kye rgyal ba’i sras byaṅ chub sems dpa’ rnams ji ltar na kha na ma tho ba med pa’i lus kyi las daṅ ldan pa yin | kha na ma tho ba med pa’i ṅag gi las daṅ ldan pa yin | kha na ma tho ba med pa’i yid kyi las daṅ ldan pa yin | lus kyi las rnam par ma ñams pa yin | ṅag gi las rnam par ma ñams pa yin | yid kyi las rnam par ma ñams pa yin | lus kyi las ma smad pa yin | ṅag gi las ma smad pa yin | yid kyi las ma smad pa yin | lus kyi las mi ’phrogs pa yin | ṅag gi las mi ’phrogs pa yin | yid kyi las mi ’phrogs pa yin | lus kyi las mi zlog pa yin | ṅag gi las mi zlog pa yin | yid kyi las mi zlog pa yin | lus kyi las mi ’khrugs pa yin | ṅag gi las mi ’khrugs pa yin | yid kyi las mi ’khrugs pa yin | lus kyi las bsṅags pa yin | ṅag gi las bsṅags pa yin | yid kyi las bsṅags pa yin | lus kyi las rnam par dag pa yin | ṅag gi las rnam par dag pa yin | yid kyi las rnam par dag pa yin |lus kyi las ñe bar ñon moṅs pa med pa yin | ṅag gi las ñe bar ñon moṅs pa med pa yin | yid kyi las ñe bar ñon moṅs pa med pa yin | lus kyi las ye śes sṅon du ’gro ba yin | ṅag gi las ye śes sṅon du ’gro ba yin | yid kyi las ye śes sṅon du ’gro (211a1) ba yin | <br/><br/> The Tibetan does not correspond to both Chinese versions and is much longer than them, but still, all the three versions seem to share the same topics and key-words, such as kāyakarman, vākkarman and manaskarman.&nbsp;</span><span id='8843056bi' class='paragraph'>
+						 See the previous record.&nbsp;</span><span id='8843057bi' class='paragraph'>
+						 rigs phun sum tshogs pa yin | rus phun sum tshogs pa yin | rgyud phun sum tshogs pa yin | gzugs phun sum tshogs pa yin | mtshan phun sum tshogs pa yin | dran pa phun sum tshogs pa yin | blo gros phun sum tshogs pa yin | rtogs pa phun sum tshogs pa yin | dga’ ba phun sum tshogs pa yin | blo phun sum tshogs pa yin |&nbsp;</span><span id='8843058bi' class='paragraph'>
+						 blo gros mchog tu gyur pa yin | blo gros dam par gyur pa yin | blo gros rab tu gyur pa yin | blo gros tshad med pa yin | blo gros graṅs med pa yin | blo gros bsam gyis mi khyab pa yin | blo gros mtshuṅs pa med pa yin | blo gros gźal du med pa yin | blo gros brjod du med pa yin |&nbsp;</span><span id='8843059bi' class='paragraph'>
+						 stoṅ pa ñid yoṅs su bsgoms pa yin | mtshan ma med pa yoṅs su bsgoms pa yin | smon pa med pa yoṅs su bsgoms pa yin |&nbsp;</span><span id='8843060bi' class='paragraph'>
+						 rgyu’i stobs can yin | bsam pa’i stobs can yin | sbyor ba’i stobs can yin | rkyen gyi stobs can yin | dmigs pa’i stobs can yin | dbaṅ po’i stobs can yin | rnam par lta ba’i stobs can yin | źi gnas kyi stobs can yin | lhag mthoṅ gi stobs can yin | ṅes par rtogs pa’i stobs can yin | <br/><br/> phuṅ po la mkhas pa yin | khams la mkhas pa yin | skye mched la mkhas pa yin | rten ciṅ ’brel par ’byuṅ ba la mkhas pa yin | gzugs kyi khams la mkhas pa yin | gzugs med pa’i khams la mkhas pa yin | ’das pa la mkhas pa yin | ma ’oṅs pa la mkhas pa yin | da ltar byuṅ ba la mkhas pa yin | dran pa yaṅ dag byaṅ chub kyi yan lag  la mkhas pa yin | chos rnam par ’byed pa yaṅ dag byaṅ chub kyi yan lag la mkhas pa yin | brtson ’grus yaṅ dag byaṅ chub kyi yan lag la mkhas pa yin | dga’ ba yaṅ dag byaṅ chub kyi yan lag la mkhas pa yin | rab tu byaṅ ba yaṅ dag byaṅ chub kyi yan lag la mkhas pa yin | tiṅ ṅe ’dzin yaṅ dag byaṅ chub kyi yan lag la mkhas pa yin | btaṅ sñoms yaṅ dag [35-1-211b] byaṅ chub kyi yan lag la mkhas pa yin | <br/><br/> sbyin pa’i pha rol tu phyin pa yin | tshul khrims kyi pha rol tu phyin pa yin | bzod pa’i pha rol tu phyin pa yin | brtson ’grus kyi pha rol tu phyin pa yin | bsam gtan gyi pha rol tu phyin pa yin | śes rab kyi pha rol tu phyin pa yin | byams pa’i pha rol tu phyin pa yin | sñiṅ rje’i pha rol tu phyin pa yin | dga’ ba’i pha rol tu phyin pa yin | btaṅ sñoms kyi pha rol tu phyin pa yin <br/><br/> lha yi dbaṅ pos yoṅs su bzuṅ ba yin | klu’i dbaṅ pos yoṅs su bzuṅ ba yin | gnod sbyin gyi dbaṅ pos yoṅs su bzuṅ ba yin | dri za’i dbaṅ pos yoṅs su bzuṅ ba yin | lha ma yin gyi dbaṅ pos yoṅs su bzuṅ ba yin | nam mkha’ ldiṅ gi dbaṅ pos yoṅs su bzuṅ ba yin | mi ’am ci’i dbaṅ pos yoṅs su bzuṅ ba yin | lto ’phye chen po’i dbaṅ pos yoṅs su bzuṅ ba yin | mi’i dbaṅ pos yoṅs su bzuṅ ba yin | tshaṅs pa’i dbaṅ pos [35-1-212a] yoṅs su bzuṅ ba yin | <br/><br/> lha yi dbaṅ pos bkur ba yin | klu yi dbaṅ pos bkur ba yin | gnod sbyin gyi dbaṅ pos bkur ba yin | dri za’i dbaṅ pos bkur ba yin | lha ma yin gyi dbaṅ pos bkur ba yin | nam mkha’ ldiṅ gi dbaṅ pos bkur ba yin | mi ’am ci’i dbaṅ pos bkur ba yin | lto ’phye chen po’i dbaṅ pos bkur ba yin | mi yi dbaṅ pos bkur ba yin | tshaṅs pa’i dbaṅ pos bkur ba yin |&nbsp;</span><span id='8843061bi' class='paragraph'>
+						 sems can thams cad kyi gnas su gyur pa yin | skyabs su gyur pa yin | dpuṅ gñen du gyur pa yin | mgon du gyur pa yin | sgron mar gyur pa yin | snaṅ bar gyur pa yin | ’od du gyur pa yin | ’dren par gyur pa yin | rnam par ’dren par gyur pa yin | yoṅs su ’dren par gyur pa yin | sems can thams cad kyi mchog tu gyur pa yin | gtso bor gyur pa yin | thu bor gyur pa yin | rab tu gyur pa yin | dam par gyur pa yin | phul du gyur pa yin | bla na med par gyur pa yin |&nbsp;</span><span id='8843062bi' class='paragraph'>
+						 kye rgyal ba’i sras ji ltar na byaṅ chub sems dpa’ rnams mñam pa med pa yin | de skad ces smras pa daṅ | byaṅ chub sems dpa’ ’jam dpal gyis | byaṅ chub sems dpa’ ye śes dpal la ’di skad ces smras so || kye rgyal ba’i sras de ltar khyod skye bo maṅ po la phan pa daṅ | skye bo maṅ po la bde ba daṅ ’jig rten la sñiṅ brtse ba daṅ  | lha daṅ mi rnams kyi don daṅ phan pa daṅ  | bde ba daṅ bde bar rnam par gzud pa’i phyir źugs shiṅ  | de ltar khyod rnam pa ’di lta bu’i gnas dag yoṅs su ’dri bar sems pa ni | kye rgyal ba’i sras legs so legs so ||&nbsp;</span><span id='8843063bi' class='paragraph'>
+						 &nbsp;</span><span id='8843064bi' class='paragraph'>
+						 &nbsp;</span><span id='8843065bi' class='paragraph'>
+						 &nbsp;</span><span id='8843066bi' class='paragraph'>
+						 &nbsp;</span><span id='8843067bi' class='paragraph'>
+						 &nbsp;</span><span id='8843068bi' class='paragraph'>
+						 &nbsp;</span><span id='8843069bi' class='paragraph'>
+						 &nbsp;</span><span id='8843070bi' class='paragraph'>
+						 &nbsp;</span><span id='8843071bi' class='paragraph'>
+						 &nbsp;</span><span id='8843072bi' class='paragraph'>
+						 &nbsp;</span><span id='8843073bi' class='paragraph'>
+						 &nbsp;</span><span id='8843074bi' class='paragraph'>
+						 &nbsp;</span><span id='8843075bi' class='paragraph'>
+						 &nbsp;</span><span id='8843076bi' class='paragraph'>
+						 &nbsp;</span><span id='8843077bi' class='paragraph'>
+						 &nbsp;</span><span id='8843078bi' class='paragraph'>
+						 &nbsp;</span><span id='8843079bi' class='paragraph'>
+						 &nbsp;</span><span id='8843080bi' class='paragraph'>
+						 &nbsp;</span><span id='8843081bi' class='paragraph'>
+						 &nbsp;</span><span id='8843082bi' class='paragraph'>
+						 &nbsp;</span><span id='8843083bi' class='paragraph'>
+						 &nbsp;</span><span id='8843084bi' class='paragraph'>
+						 &nbsp;</span><span id='8843085bi' class='paragraph'>
+						 &nbsp;</span><span id='8843086bi' class='paragraph'>
+						 &nbsp;</span><span id='8843087bi' class='paragraph'>
+						 &nbsp;</span><span id='8843088bi' class='paragraph'>
+						 &nbsp;</span><span id='8843089bi' class='paragraph'>
+						 &nbsp;</span><span id='8843090bi' class='paragraph'>
+						 &nbsp;</span><span id='8843091bi' class='paragraph'>
+						 &nbsp;</span><span id='8843092bi' class='paragraph'>
+						 &nbsp;</span><span id='8843093bi' class='paragraph'>
+						 &nbsp;</span><span id='8843094bi' class='paragraph'>
+						 &nbsp;</span><span id='8843095bi' class='paragraph'>
+						 &nbsp;</span><span id='8843096bi' class='paragraph'>
+						 &nbsp;</span><span id='8843097bi' class='paragraph'>
+						 &nbsp;</span><span id='8843098bi' class='paragraph'>
+						 &nbsp;</span><span id='8843099bi' class='paragraph'>
+						 &nbsp;</span><span id='8843100bi' class='paragraph'>
+						 &nbsp;</span><span id='8843101bi' class='paragraph'>
+						 &nbsp;</span><span id='8843102bi' class='paragraph'>
+						 &nbsp;</span><span id='8843103bi' class='paragraph'>
+						 &nbsp;</span><span id='8843104bi' class='paragraph'>
+						 &nbsp;</span><span id='8843105bi' class='paragraph'>
+						 &nbsp;</span><span id='8843106bi' class='paragraph'>
+						 &nbsp;</span><span id='8843107bi' class='paragraph'>
+						 &nbsp;</span><span id='8843108bi' class='paragraph'>
+						 &nbsp;</span><span id='8843109bi' class='paragraph'>
+						 &nbsp;</span><span id='8843110bi' class='paragraph'>
+						 &nbsp;</span><span id='8843111bi' class='paragraph'>
+						 &nbsp;</span><span id='8843112bi' class='paragraph'>
+						 &nbsp;</span><span id='8843113bi' class='paragraph'>
+						 &nbsp;</span><span id='8843114bi' class='paragraph'>
+						 &nbsp;</span><span id='8843115bi' class='paragraph'>
+						 ’khar ba len pa’i tshe byaṅ chub sems dpas sems can thams cad mchod sbyin byas śiṅ lam ston par gyur cig ces sems bskyed do ||&nbsp;</span><span id='8843116bi' class='paragraph'>
+						 lhuṅ bzed len pa’i tshe | byaṅ chub sems dpas sems can thams cad ’gro ba thams cad kyis mchod par ’os śiṅ snod du gyur cig ces sems bskyed do ||&nbsp;</span><span id='8843117bi' class='paragraph'>
+						 &nbsp;</span><span id='8843118bi' class='paragraph'>
+						 &nbsp;</span><span id='8843119bi' class='paragraph'>
+						 &nbsp;</span><span id='8843120bi' class='paragraph'>
+						 &nbsp;</span><span id='8843121bi' class='paragraph'>
+						 &nbsp;</span><span id='8843122bi' class='paragraph'>
+						 &nbsp;</span><span id='8843123bi' class='paragraph'>
+						 &nbsp;</span><span id='8843124bi' class='paragraph'>
+						 &nbsp;</span><span id='8843125bi' class='paragraph'>
+						 &nbsp;</span><span id='8843126bi' class='paragraph'>
+						 &nbsp;</span><span id='8843127bi' class='paragraph'>
+						 &nbsp;</span><span id='8843128bi' class='paragraph'>
+						 &nbsp;</span><span id='8843129bi' class='paragraph'>
+						 &nbsp;</span><span id='8843130bi' class='paragraph'>
+						 &nbsp;</span><span id='8843131bi' class='paragraph'>
+						 &nbsp;</span><span id='8843132bi' class='paragraph'>
+						 &nbsp;</span><span id='8843133bi' class='paragraph'>
+						 &nbsp;</span><span id='8843134bi' class='paragraph'>
+						 &nbsp;</span><span id='8843135bi' class='paragraph'>
+						 &nbsp;</span><span id='8843136bi' class='paragraph'>
+						 &nbsp;</span><span id='8843137bi' class='paragraph'>
+						 &nbsp;</span><span id='8843138bi' class='paragraph'>
+						 &nbsp;</span><span id='8843139bi' class='paragraph'>
+						 &nbsp;</span><span id='8843140bi' class='paragraph'>
+						 &nbsp;</span><span id='8843141bi' class='paragraph'>
+						 &nbsp;</span><span id='8843142bi' class='paragraph'>
+						 &nbsp;</span><span id='8843143bi' class='paragraph'>
+						 &nbsp;</span><span id='8843144bi' class='paragraph'>
+						 &nbsp;</span><span id='8843145bi' class='paragraph'>
+						 &nbsp;</span><span id='8843146bi' class='paragraph'>
+						 &nbsp;</span><span id='8843147bi' class='paragraph'>
+						 &nbsp;</span><span id='8843148bi' class='paragraph'>
+						 &nbsp;</span><span id='8843149bi' class='paragraph'>
+						 &nbsp;</span><span id='8843150bi' class='paragraph'>
+						 &nbsp;</span><span id='8843151bi' class='paragraph'>
+						 &nbsp;</span><span id='8843152bi' class='paragraph'>
+						 &nbsp;</span><span id='8843153bi' class='paragraph'>
+						 &nbsp;</span><span id='8843154bi' class='paragraph'>
+						 &nbsp;</span><span id='8843155bi' class='paragraph'>
+						 &nbsp;</span><span id='8843156bi' class='paragraph'>
+						 &nbsp;</span><span id='8843157bi' class='paragraph'>
+						 &nbsp;</span><span id='8843158bi' class='paragraph'>
+						 &nbsp;</span><span id='8843159bi' class='paragraph'>
+						 &nbsp;</span><span id='8843160bi' class='paragraph'>
+						 &nbsp;</span><span id='8843161bi' class='paragraph'>
+						 &nbsp;</span><span id='8843162bi' class='paragraph'>
+						 &nbsp;</span><span id='8843163bi' class='paragraph'>
+						 &nbsp;</span><span id='8843164bi' class='paragraph'>
+						 &nbsp;</span><span id='8843165bi' class='paragraph'>
+						 &nbsp;</span><span id='8843166bi' class='paragraph'>
+						 &nbsp;</span><span id='8843167bi' class='paragraph'>
+						 &nbsp;</span><span id='8843168bi' class='paragraph'>
+						 &nbsp;</span><span id='8843169bi' class='paragraph'>
+						 &nbsp;</span><span id='8843170bi' class='paragraph'>
+						 &nbsp;</span><span id='8843171bi' class='paragraph'>
+						 &nbsp;</span><span id='8843172bi' class='paragraph'>
+						 &nbsp;</span><span id='8843173bi' class='paragraph'>
+						 &nbsp;</span><span id='8843174bi' class='paragraph'>
+						 &nbsp;</span><span id='8843175bi' class='paragraph'>
+						 &nbsp;</span><span id='8843176bi' class='paragraph'>
+						 &nbsp;</span><span id='8843177bi' class='paragraph'>
+						 &nbsp;</span><span id='8843178bi' class='paragraph'>
+						 &nbsp;</span><span id='8843179bi' class='paragraph'>
+						 &nbsp;</span><span id='8843180bi' class='paragraph'>
+						 &nbsp;</span><span id='8843181bi' class='paragraph'>
+						 &nbsp;</span><span id='8843182bi' class='paragraph'>
+						 &nbsp;</span><span id='8843183bi' class='paragraph'>
+						 &nbsp;</span><span id='8843184bi' class='paragraph'>
+						 &nbsp;</span><span id='8843185bi' class='paragraph'>
+						 &nbsp;</span><span id='8843186bi' class='paragraph'>
+						 &nbsp;</span><span id='8843187bi' class='paragraph'>
+						 &nbsp;</span><span id='8843188bi' class='paragraph'>
+						 &nbsp;</span><span id='8843189bi' class='paragraph'>
+						 &nbsp;</span><span id='8843190bi' class='paragraph'>
+						 &nbsp;</span><span id='8843191bi' class='paragraph'>
+						 &nbsp;</span><span id='8843192bi' class='paragraph'>
+						 &nbsp;</span><span id='8843193bi' class='paragraph'>
+						 &nbsp;</span><span id='8843194bi' class='paragraph'>
+						 &nbsp;</span><span id='8843195bi' class='paragraph'>
+						 &nbsp;</span><span id='8843196bi' class='paragraph'>
+						 &nbsp;</span><span id='8843197bi' class='paragraph'>
+						 &nbsp;</span><span id='8843198bi' class='paragraph'>
+						 &nbsp;</span><span id='8843199bi' class='paragraph'>
+						 &nbsp;</span><span id='8843200bi' class='paragraph'>
+						 &nbsp;</span><span id='8843201bi' class='paragraph'>
+						 &nbsp;</span><span id='8843202bi' class='paragraph'>
+						 &nbsp;</span><span id='8843203bi' class='paragraph'>
+						 &nbsp;</span><span id='8843204bi' class='paragraph'>
+						 &nbsp;</span><span id='8843205bi' class='paragraph'>
+						 &nbsp;</span><span id='8843206bi' class='paragraph'>
+						 &nbsp;</span><span id='8843207bi' class='paragraph'>
+						 &nbsp;</span><span id='8843208bi' class='paragraph'>
+						 &nbsp;</span><span id='8843209bi' class='paragraph'>
+						 &nbsp;</span><span id='8843210bi' class='paragraph'>
+						 &nbsp;</span><span id='8843211bi' class='paragraph'>
+						 &nbsp;</span><span id='8843212bi' class='paragraph'>
+						 &nbsp;</span><span id='8843213bi' class='paragraph'>
+						 &nbsp;</span><span id='8843214bi' class='paragraph'>
+						 &nbsp;</span><span id='8843215bi' class='paragraph'>
+						 &nbsp;</span><span id='8843216bi' class='paragraph'>
+						 &nbsp;</span><span id='8843217bi' class='paragraph'>
+						 &nbsp;</span><span id='8843218bi' class='paragraph'>
+						 &nbsp;</span><span id='8843219bi' class='paragraph'>
+						 &nbsp;</span><span id='8843220bi' class='paragraph'>
+						 &nbsp;</span><span id='8843221bi' class='paragraph'>
+						 &nbsp;</span><span id='8843222bi' class='paragraph'>
+						 &nbsp;</span><span id='8843223bi' class='paragraph'>
+						 &nbsp;</span><span id='8843224bi' class='paragraph'>
+						 &nbsp;</span><span id='8843225bi' class='paragraph'>
+						 &nbsp;</span><span id='8843226bi' class='paragraph'>
+						 &nbsp;</span><span id='8843227bi' class='paragraph'>
+						 &nbsp;</span><span id='8843228bi' class='paragraph'>
+						 &nbsp;</span><span id='8843229bi' class='paragraph'>
+						 &nbsp;</span><span id='8843230bi' class='paragraph'>
+						 &nbsp;</span><span id='8843231bi' class='paragraph'>
+						 &nbsp;</span><span id='8843232bi' class='paragraph'>
+						 &nbsp;</span><span id='8843233bi' class='paragraph'>
+						 &nbsp;</span><span id='8843234bi' class='paragraph'>
+						 &nbsp;</span><span id='8843235bi' class='paragraph'>
+						 &nbsp;</span><span id='8843236bi' class='paragraph'>
+						 &nbsp;</span><span id='8843237bi' class='paragraph'>
+						 &nbsp;</span><span id='8843238bi' class='paragraph'>
+						 &nbsp;</span><span id='8843239bi' class='paragraph'>
+						 &nbsp;</span><span id='8843240bi' class='paragraph'>
+						 &nbsp;</span><span id='8843241bi' class='paragraph'>
+						 &nbsp;</span><span id='8843242bi' class='paragraph'>
+						 &nbsp;</span><span id='8843243bi' class='paragraph'>
+						 &nbsp;</span><span id='8843244bi' class='paragraph'>
+						 &nbsp;</span><span id='8843245bi' class='paragraph'>
+						 &nbsp;</span><span id='8843246bi' class='paragraph'>
+						 &nbsp;</span><span id='8843247bi' class='paragraph'>
+						 &nbsp;</span><span id='8843248bi' class='paragraph'>
+						 &nbsp;</span><span id='8843249bi' class='paragraph'>
+						 &nbsp;</span><span id='8843250bi' class='paragraph'>
+						 &nbsp;</span><span id='8843251bi' class='paragraph'>
+						 &nbsp;</span><span id='8843252bi' class='paragraph'>
+						 &nbsp;</span><span id='8843253bi' class='paragraph'>
+						 &nbsp;</span><span id='8843254bi' class='paragraph'>
+						 &nbsp;</span><span id='8843255bi' class='paragraph'>
+						 &nbsp;</span><span id='8843256bi' class='paragraph'>
+						 &nbsp;</span><span id='8843257bi' class='paragraph'>
+						 &nbsp;</span><span id='8843258bi' class='paragraph'>
+						 &nbsp;</span><span id='8843259bi' class='paragraph'>
+						 &nbsp;</span><span id='8843260bi' class='paragraph'>
+						 &nbsp;</span><span id='8843261bi' class='paragraph'>
+						 &nbsp;</span><span id='8843262bi' class='paragraph'>
+						 &nbsp;</span><span id='8843263bi' class='paragraph'>
+						 &nbsp;</span><span id='8843264bi' class='paragraph'>
+						 &nbsp;</span><span id='8843265bi' class='paragraph'>
+						 &nbsp;</span><span id='8843266bi' class='paragraph'>
+						 &nbsp;</span><span id='8843267bi' class='paragraph'>
+						 &nbsp;</span><span id='8843268bi' class='paragraph'>
+						 &nbsp;</span><span id='8843269bi' class='paragraph'>
+						 &nbsp;</span><span id='8843270bi' class='paragraph'>
+						 &nbsp;</span><span id='8843271bi' class='paragraph'>
+						 &nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='8842780'></div><div class='clear'></div><span id='8842780bi' class='paragraph'>
+							Praṇidhānacaryā&nbsp;</span><span id='8842781bi' class='paragraph'>
+						 &nbsp;</span><span id='8842782bi' class='paragraph'>
+						 &nbsp;</span><span id='8842783bi' class='paragraph'>
+						 &nbsp;</span><span id='8842784bi' class='paragraph'>
+						 &nbsp;</span><span id='8842785bi' class='paragraph'>
+						 &nbsp;</span><span id='8842786bi' class='paragraph'>
+						 &nbsp;</span><span id='8842787bi' class='paragraph'>
+						 &nbsp;</span><span id='8842788bi' class='paragraph'>
+						 &nbsp;</span><span id='8842789bi' class='paragraph'>
+						 &nbsp;</span><span id='8842790bi' class='paragraph'>
+						 &nbsp;</span><span id='8842791bi' class='paragraph'>
+						 &nbsp;</span><span id='8842792bi' class='paragraph'>
+						 &nbsp;</span><span id='8842793bi' class='paragraph'>
+						 &nbsp;</span><span id='8842794bi' class='paragraph'>
+						 &nbsp;</span><span id='8842795bi' class='paragraph'>
+						 &nbsp;</span><span id='8842796bi' class='paragraph'>
+						 &nbsp;</span><span id='8842797bi' class='paragraph'>
+						 &nbsp;</span><span id='8842798bi' class='paragraph'>
+						 &nbsp;</span><span id='8842799bi' class='paragraph'>
+						 &nbsp;</span><span id='8842800bi' class='paragraph'>
+						 &nbsp;</span><span id='8842801bi' class='paragraph'>
+						 &nbsp;</span><span id='8842802bi' class='paragraph'>
+						 &nbsp;</span><span id='8842803bi' class='paragraph'>
+						 &nbsp;</span><span id='8842804bi' class='paragraph'>
+						 &nbsp;</span><span id='8842805bi' class='paragraph'>
+						 &nbsp;</span><span id='8842806bi' class='paragraph'>
+						 &nbsp;</span><span id='8842807bi' class='paragraph'>
+						 &nbsp;</span><span id='8842808bi' class='paragraph'>
+						 &nbsp;</span><span id='8842809bi' class='paragraph'>
+						 &nbsp;</span><span id='8842810bi' class='paragraph'>
+						 &nbsp;</span><span id='8842811bi' class='paragraph'>
+						 &nbsp;</span><span id='8842812bi' class='paragraph'>
+						 &nbsp;</span><span id='8842813bi' class='paragraph'>
+						 &nbsp;</span><span id='8842814bi' class='paragraph'>
+						 &nbsp;</span><span id='8842815bi' class='paragraph'>
+						 &nbsp;</span><span id='8842816bi' class='paragraph'>
+						 &nbsp;</span><span id='8842817bi' class='paragraph'>
+						 &nbsp;</span><span id='8842818bi' class='paragraph'>
+						 &nbsp;</span><span id='8842819bi' class='paragraph'>
+						 &nbsp;</span><span id='8842820bi' class='paragraph'>
+						 &nbsp;</span><span id='8842821bi' class='paragraph'>
+						 &nbsp;</span><span id='8842822bi' class='paragraph'>
+						 &nbsp;</span><span id='8842823bi' class='paragraph'>
+						 &nbsp;</span><span id='8842824bi' class='paragraph'>
+						 &nbsp;</span><span id='8842825bi' class='paragraph'>
+						 &nbsp;</span><span id='8842826bi' class='paragraph'>
+						 &nbsp;</span><span id='8842827bi' class='paragraph'>
+						 &nbsp;</span><span id='8842828bi' class='paragraph'>
+						 &nbsp;</span><span id='8842829bi' class='paragraph'>
+						 &nbsp;</span><span id='8842830bi' class='paragraph'>
+						 &nbsp;</span><span id='8842831bi' class='paragraph'>
+						 &nbsp;</span><span id='8842832bi' class='paragraph'>
+						 &nbsp;</span><span id='8842833bi' class='paragraph'>
+						 &nbsp;</span><span id='8842834bi' class='paragraph'>
+						 &nbsp;</span><span id='8842835bi' class='paragraph'>
+						 &nbsp;</span><span id='8842836bi' class='paragraph'>
+						 &nbsp;</span><span id='8842837bi' class='paragraph'>
+						 &nbsp;</span><span id='8842838bi' class='paragraph'>
+						 &nbsp;</span><span id='8842839bi' class='paragraph'>
+						 &nbsp;</span><span id='8842840bi' class='paragraph'>
+						 &nbsp;</span><span id='8842841bi' class='paragraph'>
+						 &nbsp;</span><span id='8842842bi' class='paragraph'>
+						 &nbsp;</span><span id='8842843bi' class='paragraph'>
+						 &nbsp;</span><span id='8842844bi' class='paragraph'>
+						 &nbsp;</span><span id='8842845bi' class='paragraph'>
+						 &nbsp;</span><span id='8842846bi' class='paragraph'>
+						 &nbsp;</span><span id='8842847bi' class='paragraph'>
+						 &nbsp;</span><span id='8842848bi' class='paragraph'>
+						 &nbsp;</span><span id='8842849bi' class='paragraph'>
+						 &nbsp;</span><span id='8842850bi' class='paragraph'>
+						 &nbsp;</span><span id='8842851bi' class='paragraph'>
+						 &nbsp;</span><span id='8842852bi' class='paragraph'>
+						 &nbsp;</span><span id='8842853bi' class='paragraph'>
+						 &nbsp;</span><span id='8842854bi' class='paragraph'>
+						 &nbsp;</span><span id='8842855bi' class='paragraph'>
+						 &nbsp;</span><span id='8842856bi' class='paragraph'>
+						 &nbsp;</span><span id='8842857bi' class='paragraph'>
+						 &nbsp;</span><span id='8842858bi' class='paragraph'>
+						 &nbsp;</span><span id='8842859bi' class='paragraph'>
+						 &nbsp;</span><span id='8842860bi' class='paragraph'>
+						 &nbsp;</span><span id='8842861bi' class='paragraph'>
+						 &nbsp;</span><span id='8842862bi' class='paragraph'>
+						 &nbsp;</span><span id='8842863bi' class='paragraph'>
+						 &nbsp;</span><span id='8842864bi' class='paragraph'>
+						 &nbsp;</span><span id='8842865bi' class='paragraph'>
+						 &nbsp;</span><span id='8842866bi' class='paragraph'>
+						 &nbsp;</span><span id='8842867bi' class='paragraph'>
+						 &nbsp;</span><span id='8842868bi' class='paragraph'>
+						 &nbsp;</span><span id='8842869bi' class='paragraph'>
+						 &nbsp;</span><span id='8842870bi' class='paragraph'>
+						 &nbsp;</span><span id='8842871bi' class='paragraph'>
+						 &nbsp;</span><span id='8842872bi' class='paragraph'>
+						 &nbsp;</span><span id='8842873bi' class='paragraph'>
+						 &nbsp;</span><span id='8842874bi' class='paragraph'>
+						 &nbsp;</span><span id='8842875bi' class='paragraph'>
+						 &nbsp;</span><span id='8842876bi' class='paragraph'>
+						 &nbsp;</span><span id='8842877bi' class='paragraph'>
+						 &nbsp;</span><span id='8842878bi' class='paragraph'>
+						 &nbsp;</span><span id='8842879bi' class='paragraph'>
+						 &nbsp;</span><span id='8842880bi' class='paragraph'>
+						 &nbsp;</span><span id='8842881bi' class='paragraph'>
+						 &nbsp;</span><span id='8842882bi' class='paragraph'>
+						 &nbsp;</span><span id='8842883bi' class='paragraph'>
+						 &nbsp;</span><span id='8842884bi' class='paragraph'>
+						 &nbsp;</span><span id='8842885bi' class='paragraph'>
+						 &nbsp;</span><span id='8842886bi' class='paragraph'>
+						 &nbsp;</span><span id='8842887bi' class='paragraph'>
+						 &nbsp;</span><span id='8842888bi' class='paragraph'>
+						 &nbsp;</span><span id='8842889bi' class='paragraph'>
+						 &nbsp;</span><span id='8842890bi' class='paragraph'>
+						 &nbsp;</span><span id='8842891bi' class='paragraph'>
+						 &nbsp;</span><span id='8842892bi' class='paragraph'>
+						 &nbsp;</span><span id='8842893bi' class='paragraph'>
+						 &nbsp;</span><span id='8842894bi' class='paragraph'>
+						 &nbsp;</span><span id='8842895bi' class='paragraph'>
+						 &nbsp;</span><span id='8842896bi' class='paragraph'>
+						 &nbsp;</span><span id='8842897bi' class='paragraph'>
+						 &nbsp;</span><span id='8842898bi' class='paragraph'>
+						 &nbsp;</span><span id='8842899bi' class='paragraph'>
+						 &nbsp;</span><span id='8842900bi' class='paragraph'>
+						 &nbsp;</span><span id='8842901bi' class='paragraph'>
+						 &nbsp;</span><span id='8842902bi' class='paragraph'>
+						 &nbsp;</span><span id='8842903bi' class='paragraph'>
+						 &nbsp;</span><span id='8842904bi' class='paragraph'>
+						 &nbsp;</span><span id='8842905bi' class='paragraph'>
+						 &nbsp;</span><span id='8842906bi' class='paragraph'>
+						 &nbsp;</span><span id='8842907bi' class='paragraph'>
+						 &nbsp;</span><span id='8842908bi' class='paragraph'>
+						 &nbsp;</span><span id='8842909bi' class='paragraph'>
+						 &nbsp;</span><span id='8842910bi' class='paragraph'>
+						 &nbsp;</span><span id='8842911bi' class='paragraph'>
+						 &nbsp;</span><span id='8842912bi' class='paragraph'>
+						 &nbsp;</span><span id='8842913bi' class='paragraph'>
+						 &nbsp;</span><span id='8842914bi' class='paragraph'>
+						 &nbsp;</span><span id='8842915bi' class='paragraph'>
+						 &nbsp;</span><span id='8842916bi' class='paragraph'>
+						 &nbsp;</span><span id='8842917bi' class='paragraph'>
+						 &nbsp;</span><span id='8842918bi' class='paragraph'>
+						 &nbsp;</span><span id='8842919bi' class='paragraph'>
+						 &nbsp;</span><span id='8842920bi' class='paragraph'>
+						 &nbsp;</span><span id='8842921bi' class='paragraph'>
+						 &nbsp;</span><span id='8842922bi' class='paragraph'>
+						 &nbsp;</span><span id='8842923bi' class='paragraph'>
+						 &nbsp;</span><span id='8842924bi' class='paragraph'>
+						 &nbsp;</span><span id='8842925bi' class='paragraph'>
+						 &nbsp;</span><span id='8842926bi' class='paragraph'>
+						 &nbsp;</span><span id='8842927bi' class='paragraph'>
+						 &nbsp;</span><span id='8842928bi' class='paragraph'>
+						 &nbsp;</span><span id='8842929bi' class='paragraph'>
+						 &nbsp;</span><span id='8842930bi' class='paragraph'>
+						 &nbsp;</span><span id='8842931bi' class='paragraph'>
+						 &nbsp;</span><span id='8842932bi' class='paragraph'>
+						 &nbsp;</span><span id='8842933bi' class='paragraph'>
+						 &nbsp;</span><span id='8842934bi' class='paragraph'>
+						 &nbsp;</span><span id='8842935bi' class='paragraph'>
+						 &nbsp;</span><span id='8842936bi' class='paragraph'>
+						 &nbsp;</span><span id='8842937bi' class='paragraph'>
+						 &nbsp;</span><span id='8842938bi' class='paragraph'>
+						 &nbsp;</span><span id='8842939bi' class='paragraph'>
+						 &nbsp;</span><span id='8842940bi' class='paragraph'>
+						 &nbsp;</span><span id='8842941bi' class='paragraph'>
+						 &nbsp;</span><span id='8842942bi' class='paragraph'>
+						 &nbsp;</span><span id='8842943bi' class='paragraph'>
+						 &nbsp;</span><span id='8842944bi' class='paragraph'>
+						 &nbsp;</span><span id='8842945bi' class='paragraph'>
+						 &nbsp;</span><span id='8842946bi' class='paragraph'>
+						 &nbsp;</span><span id='8842947bi' class='paragraph'>
+						 &nbsp;</span><span id='8842948bi' class='paragraph'>
+						 &nbsp;</span><span id='8842949bi' class='paragraph'>
+						 &nbsp;</span><span id='8842950bi' class='paragraph'>
+						 &nbsp;</span><span id='8842951bi' class='paragraph'>
+						 &nbsp;</span><span id='8842952bi' class='paragraph'>
+						 &nbsp;</span><span id='8842953bi' class='paragraph'>
+						 &nbsp;</span><span id='8842954bi' class='paragraph'>
+						 &nbsp;</span><span id='8842955bi' class='paragraph'>
+						 &nbsp;</span><span id='8842956bi' class='paragraph'>
+						 &nbsp;</span><span id='8842957bi' class='paragraph'>
+						 &nbsp;</span><span id='8842958bi' class='paragraph'>
+						 &nbsp;</span><span id='8842959bi' class='paragraph'>
+						 &nbsp;</span><span id='8842960bi' class='paragraph'>
+						 &nbsp;</span><span id='8842961bi' class='paragraph'>
+						 &nbsp;</span><span id='8842962bi' class='paragraph'>
+						 &nbsp;</span><span id='8842963bi' class='paragraph'>
+						 &nbsp;</span><span id='8842964bi' class='paragraph'>
+						 &nbsp;</span><span id='8842965bi' class='paragraph'>
+						 &nbsp;</span><span id='8842966bi' class='paragraph'>
+						 &nbsp;</span><span id='8842967bi' class='paragraph'>
+						 &nbsp;</span><span id='8842968bi' class='paragraph'>
+						 &nbsp;</span><span id='8842969bi' class='paragraph'>
+						 &nbsp;</span><span id='8842970bi' class='paragraph'>
+						 &nbsp;</span><span id='8842971bi' class='paragraph'>
+						 &nbsp;</span><span id='8842972bi' class='paragraph'>
+						 &nbsp;</span><span id='8842973bi' class='paragraph'>
+						 &nbsp;</span><span id='8842974bi' class='paragraph'>
+						 &nbsp;</span><span id='8842975bi' class='paragraph'>
+						 &nbsp;</span><span id='8842976bi' class='paragraph'>
+						 &nbsp;</span><span id='8842977bi' class='paragraph'>
+						 &nbsp;</span><span id='8842978bi' class='paragraph'>
+						 &nbsp;</span><span id='8842979bi' class='paragraph'>
+						 &nbsp;</span><span id='8842980bi' class='paragraph'>
+						 &nbsp;</span><span id='8842981bi' class='paragraph'>
+						 &nbsp;</span><span id='8842982bi' class='paragraph'>
+						 &nbsp;</span><span id='8842983bi' class='paragraph'>
+						 &nbsp;</span><span id='8842984bi' class='paragraph'>
+						 &nbsp;</span><span id='8842985bi' class='paragraph'>
+						 &nbsp;</span><span id='8842986bi' class='paragraph'>
+						 &nbsp;</span><span id='8842987bi' class='paragraph'>
+						 &nbsp;</span><span id='8842988bi' class='paragraph'>
+						 &nbsp;</span><span id='8842989bi' class='paragraph'>
+						 &nbsp;</span><span id='8842990bi' class='paragraph'>
+						 &nbsp;</span><span id='8842991bi' class='paragraph'>
+						 &nbsp;</span><span id='8842992bi' class='paragraph'>
+						 &nbsp;</span><span id='8842993bi' class='paragraph'>
+						 &nbsp;</span><span id='8842994bi' class='paragraph'>
+						 &nbsp;</span><span id='8842995bi' class='paragraph'>
+						 &nbsp;</span><span id='8842996bi' class='paragraph'>
+						 &nbsp;</span><span id='8842997bi' class='paragraph'>
+						 &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class=''><span id='bi' class=''>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "";
+							kilderef = "  ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=15029f6a-7342-11e8-8a71-0050569f23b2</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>
